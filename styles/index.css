@@ -4,14 +4,33 @@ body {
 }
 
 h1, h2, h3, h4 {
-    background-color: darkblue;
+    
     text-align: center;
     padding: 15px;
 }
 
+div {
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+}
+
+img {
+    
+    
+}
+
 nav ul li a {
+    display: block;
+    
+    
+    
+}
+.box1 {
     background-color: black;
-    padding: 10px;
     text-align: center;
     justify-content: space-around;
+
 }
