@@ -7,7 +7,7 @@
     <title>WDD 231 - Home Page - Alejandro I. Pérez B.</title>
     <meta
       name="description"
-      content="WDD 231 - Dynamic Web Development I - Alejandro Isaac Pérez Brito, I am currently study my major in Professional Study at BYU-Idaho through BYU Pathway Worldwide to get a new carrer with the English Language and Software Development."
+      content="WDD 231 - Web Frontend Development I - Alejandro Isaac Pérez Brito, I am currently study my major in Professional Study at BYU-Idaho through BYU Pathway Worldwide to get a new carrer with the English Language and Software Development."
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
@@ -81,5 +81,26 @@
       </section>
     </main>
   </body>
-  <footer>2025 Alejandro Isaac Pérez Brito Venezuela</footer>
+  <footer>
+    2025 Alejandro Isaac Pérez Brito Venezuela
+    <p>
+      <code>&#169; </code><span id="currentYear"></span>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var currentYear = new Date().getFullYear();
+          document.getElementById("currentYear").textContent = currentYear;
+        });
+      </script>
+      Alejandro I. Pérez <code>Caracas - Venezuela</code>
+    </p>
+    <p id="lastModified"></p>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var date = new Date(document.lastModified);
+        document.getElementById("lastModified").textContent =
+          "Last Modified: " + date;
+      });
+    </script>
+  </footer>
+  <script src="scripts/index.js" defer></script>
 </html>
