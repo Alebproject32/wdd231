@@ -41,9 +41,14 @@ img {
 }
 
 .card3 img {
-    margin-left: 0.50%;
-    margin-right: 120px;
-    margin-top: 40%;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+figcaption {
+    color: #000;
+    text-align: center;
+    font-stretch: expanded;
 }
 
  nav ul a {
@@ -95,7 +100,7 @@ img {
 .card2 h2 {
     display: grid;
     height: 20%;
-    width: 147.5%;
+    width: 95.7%;
 }
 
 .card2 nav li {
@@ -114,15 +119,20 @@ img {
 
 .card3 h3 {
     display: grid;
-    height: 13.5%;
-    width: 425%;
+    height: 40%;
+    width: 94.1%;
 }
 
 .card2, .card3 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
     gap: 20px;
 } 
+
+.card4 h4 {
+    display: grid;
+    height: 20%;
+    width: 95.7%;
+}
 
 .card4 {
     width: 99%;
@@ -131,6 +141,7 @@ img {
     filter: drop-shadow(0 0 12px #000);
     border-radius: 5px;
 }
+
 
 
 h2, h3 {
