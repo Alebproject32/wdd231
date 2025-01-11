@@ -13,6 +13,7 @@
     
 }
 
+
 body {
     background-color: lightblue;
     color: white;
@@ -56,11 +57,47 @@ img {
     background-color: black;
 }
 
-section {
-    display: flex;
+.container {
+    background-color: #ddd;
+    
 }
 
-section, h2 h3 {
-    background: var(--border-color) ;
+.card2 {
+    background-color: azure;
+    width: 400%;
+    height: 400px;
+    margin: 20px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 12px #000);
+}
+
+li {
+    display: flex;
+    color: #000;
     
+}
+
+.card3 {
+    background-color: azure;
+    width: 40%;
+    height: 400px;
+    margin: 20px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 12px #000);
+}
+
+.card2, .card3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+} 
+
+
+
+h2, h3 {
+    background: var(--border-color) ;   
+}
+
+footer {
+    text-align: center;
 }
