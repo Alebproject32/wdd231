@@ -1,16 +1,23 @@
+:root {
+    --font-family-primary: "Playfair Display", serif;
+    --font-family-secondary: "Great Vibes", italic;
+    --background-color-primary: lightblue;
+    --background-color-secondary: #ddd;
+    --background-color-third: azure;
+    --border-color: linear-gradient(
+        to right,
+        darkblue 0%,
+        lightblue 100%
+    );
+    --card-color: blue;
+    
+}
+
 @media only screen and (max-width: 768px) {
-    :root {
-        --border-color: linear-gradient(
-            to right,
-            darkblue 0%,
-            lightblue 100%
-        );
-        --card-color: blue;
-        
-    }
+    
 
     body {
-        background-color: lightblue;
+        background-color: var(--background-color-primary);
         color: white;
         margin: 0;
         padding: 0;
@@ -33,6 +40,7 @@
     }
 
     h1 {
+        font-family: var(--font-family-secondary);
         font-size: 2rem;
     }
 
@@ -78,6 +86,7 @@
 
     nav ul a {
         color: aliceblue;
+        font-family: var(--font-family-primary);
         font-size: 1.2rem;
         text-decoration: none;
         padding: 10px;
@@ -111,12 +120,12 @@
     }
 
     .container1, .container2 {
-        background-color: #ddd; 
+        background-color: var(--background-color-secondary); 
         padding: 10px;
     }
 
     .card2, .card3 {
-        background-color: azure;
+        background-color:var(--background-color-third);
         width: 100%;
         margin: 10px 0;
         border-radius: 5px;
@@ -179,6 +188,7 @@
     footer {
         background-color: var(--border-color);
         text-align: center;
+        font-family: var(--font-family-primary);
         font-size: 1.1rem;
         padding: 10px;
     }
