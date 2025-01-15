@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     :root {
-        --border-color: linear-gradient(
+        --background-color: linear-gradient(
             to right,
             darkblue 0%,
             lightblue 100%
@@ -10,7 +10,7 @@
     }
     
     .card {
-        background: var(--border-color);
+        background: var(--background-color);
     }
     
     body {
@@ -52,7 +52,7 @@
         font-stretch: expanded;
     }
     
-     nav ul a {
+     nav ul li a {
         color: aliceblue;
         font-size: 20px;
         text-decoration: none;
@@ -68,7 +68,7 @@
         flex-wrap: wrap;
     }
     
-    .navbar ul {
+    .navbar ul li {
         display: flex;
         gap: 8rem;
         margin-top: 14px;
@@ -76,7 +76,7 @@
     
     
     
-     .box1 ul a:hover{
+     .box1 ul li a:hover{
         background: orangered;
         filter: drop-shadow(0 0 8px #ddd);
         transition: 0.5s;
@@ -134,7 +134,7 @@
     
     .card4 h4 {
         font-size: 1.5rem;
-        background: var(--border-color);
+        background: var(--background-color);
     }
     .container2 {
         display: grid;
@@ -184,11 +184,11 @@
     }
     
     h2, h3 {
-        background: var(--border-color) ;   
+        background: var(--background-color) ;   
     }
     
     footer {
-        background-color: var(--border-color);
+        background-color: var(--background-color);
         text-align: center;
         font-size: 1.1rem;
         
