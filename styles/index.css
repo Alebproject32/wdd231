@@ -149,18 +149,28 @@
         width: 100%;
     }
 
-    button { 
+    .card4 button { 
         margin: 10px; 
         padding: 10px 20px; 
-        background-color: #007bff; 
+        background-color: black; 
         color: white; 
         border: none; 
         border-radius: 5px; 
         cursor: pointer; 
     } 
+
+     .card4 .courses, button {
+        justify-content: center;
+        align-items: center;
     
-    button:hover { 
-        background-color: #0056b3; 
+     }
+
+    .courses button {
+        background-color: lightseagreen;
+    } 
+
+    .card4 button:hover { 
+        background-color: chocolate; 
     } 
     
     #courseContainer { 

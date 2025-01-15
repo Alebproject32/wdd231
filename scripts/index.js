@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             completed: false
         }
-    ]
+    ];
     function displayCourses(filter) {
          const courseContainer = document.getElementById('courseContainer'); 
          courseContainer.innerHTML = ''; 
