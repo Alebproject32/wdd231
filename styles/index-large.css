@@ -147,39 +147,52 @@
         border-radius: 5px;
     }
     
-    .filters, .courses { 
-        display: flex; 
-        justify-content: center;
-        gap: 15px; 
-        margin: 20px 0; 
-    } 
-    
-    .filter-btn, .course-btn { 
-        background-color: grey; 
+    .card4 button { 
+        margin: 10px; 
+        padding: 10px 20px; 
+        background-color: black; 
         color: white; 
         border: none; 
         border-radius: 5px; 
-        padding: 10px 20px; 
         cursor: pointer; 
-        transition: background-color 0.3s ease; 
+    } 
+
+     .card4 .courses, button {
+        justify-content: center;
+        align-items: center;
+    
+     }
+
+    .courses button {
+        background-color: lightseagreen;
+    } 
+
+    .card4 button:hover { 
+        background-color: chocolate; 
     } 
     
-    .courses {
-        display: flex;
-    }
+    #courseContainer { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 20px; 
+    } 
+        
+    .course-card { 
+        background-color: white; 
+        border-radius: 5px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        margin: 10px; 
+        padding: 20px; 
+        width: 300px; 
+    } 
     
-    .card4, .filters {
-        align-items: center;
-        justify-content: center;
+    .course-card.completed { 
+        border-left: 5px solid green; 
+    } 
     
-    }
-    
-    .filter-btn {
-        background-color: #000;
-    }
-    
-    .filter-btn:hover, .course-btn:hover { 
-        background-color: #a0522d; 
+    .course-card.not-completed { 
+        border-left: 5px solid red; 
     }
     
     h2, h3 {
