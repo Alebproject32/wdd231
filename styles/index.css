@@ -76,7 +76,7 @@
         font-stretch: expanded;
     }
 
-    nav ul {
+    nav ul  {
         padding: 0;
         list-style: none;
         display: flex;
@@ -84,7 +84,7 @@
         align-items: center;
     }
 
-    nav ul a {
+    nav ul li a {
         color: aliceblue;
         font-family: var(--font-family-primary);
         font-size: 1.2rem;
@@ -101,14 +101,14 @@
         flex-wrap: wrap;
     }
 
-    .navbar ul {
+    .navbar ul li {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         margin: 0;
     }
 
-    .box1 ul a:hover {
+    .box1 ul li a:hover {
         background: orangered;
         filter: drop-shadow(0 0 8px #ddd);
         transition: 0.5s;
