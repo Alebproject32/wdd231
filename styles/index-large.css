@@ -68,7 +68,7 @@
         flex-wrap: wrap;
     }
     
-    .navbar ul li {
+    .navbar ul {
         display: flex;
         gap: 8rem;
         margin-top: 14px;
