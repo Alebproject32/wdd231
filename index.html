@@ -16,7 +16,7 @@
     </style>
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/index-large.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" sizes="48x48" href="favicon.ico" />
   </head>
   <body>
     <header>
@@ -61,9 +61,11 @@
         <section class="card2">
           <h2>Course Work</h2>
           <nav>
-            <li></li>
-            <li></li>
-            <li></li>
+            <menu>
+              <li></li>
+              <li></li>
+              <li></li>
+            </menu>
           </nav>
         </section>
         <section class="card3">
@@ -96,26 +98,26 @@
         </section>
       </div>
     </main>
-  </body>
-  <footer class="card">
-    <p>
-      <code>&#169; </code><span id="currentYear"></span>
+    <footer class="card">
+      <p>
+        <code>&#169; </code><span id="currentYear"></span>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var currentYear = new Date().getFullYear();
+            document.getElementById("currentYear").textContent = currentYear;
+          });
+        </script>
+        Alejandro I. Pérez <code>Caracas - Venezuela</code>
+      </p>
+      <p id="lastModified"></p>
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          var currentYear = new Date().getFullYear();
-          document.getElementById("currentYear").textContent = currentYear;
+          var date = new Date(document.lastModified);
+          document.getElementById("lastModified").textContent =
+            "Last Modified: " + date;
         });
       </script>
-      Alejandro I. Pérez <code>Caracas - Venezuela</code>
-    </p>
-    <p id="lastModified"></p>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var date = new Date(document.lastModified);
-        document.getElementById("lastModified").textContent =
-          "Last Modified: " + date;
-      });
-    </script>
-  </footer>
-  <script src="scripts/index.js" defer></script>
+    </footer>
+    <script src="scripts/index.js" defer></script>
+  </body>
 </html>
