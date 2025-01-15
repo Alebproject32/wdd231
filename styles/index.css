@@ -159,6 +159,10 @@
         cursor: pointer; 
     } 
 
+    .container2 .card4 div span {
+        color: #000;
+    }
+
      .card4 .courses, button {
         justify-content: center;
         align-items: center;
