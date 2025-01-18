@@ -147,7 +147,7 @@
         border-radius: 5px;
     }
     
-    .card4 button { 
+   .card4 button { 
         margin: 10px; 
         padding: 10px 20px; 
         background-color: black; 
@@ -157,10 +157,20 @@
         cursor: pointer; 
     } 
 
-     .card4 .courses, button {
+     .card4, .filters, .courses, button {
         justify-content: center;
         align-items: center;
-    
+     }
+
+    .courses {
+        display: flex;
+        justify-content: center;
+        
+         
+     }
+
+     div p {
+        color: #000;
      }
 
     .courses button {

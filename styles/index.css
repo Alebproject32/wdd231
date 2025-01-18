@@ -159,7 +159,7 @@
         cursor: pointer; 
     } 
 
-    .container2 .card4 div span {
+    .container2 .card4 div .totalCredits p {
         color: #000;
     }
 
@@ -169,6 +169,8 @@
     
      }
 
+
+
     .courses button {
         background-color: lightseagreen;
     } 
@@ -176,6 +178,11 @@
     .card4 button:hover { 
         background-color: chocolate; 
     } 
+
+    p {
+        color: #000;
+        
+    }
     
     #courseContainer { 
         display: flex; 
