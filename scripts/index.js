@@ -74,38 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const courseContainer = document.getElementById('courseContainer');
         courseContainer.innerHTML = '';
         
-        const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.subject === filter);
+        const filteredCourses = filter === 'all'
+            ? courses.filter(course => course.completed)
+            : courses.filter(course => course.subject === filter && course.completed);
+
         let totalCredits = 0;
         
         filteredCourses.forEach(course => {
-            if (course.completed) {
-                const courseCard = document.createElement('div');
-                courseCard.className = `course-card ${course.completed ? 'completed' : 'not-completed'}`;
-                courseCard.style.backgroundColor = 'lightgreen';
-                
-                courseCard.innerHTML = `
-                    <h2>${course.title}</h2>
-                    <p><strong>Subject:</strong> ${course.subject}</p>
-                    <p><strong>Credits:</strong> ${course.credits}</p>
-                    <p><strong>Description:</strong> ${course.description}</p>
-                    <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
-                `;
-                
-                courseContainer.appendChild(courseCard);
-                totalCredits += course.credits;
-            }
-        });
+            const courseCard = document.createElement('div');
+            courseCard.className = `course-card ${course.completed ? 'completed' : 'not-completed'}`;
+            courseCard.style.backgroundColor = 'chocolate';
+    
+            courseContainer.appendChild(courseCard);
+            totalCredits += course.credits;
+    });
         
         document.getElementById("totalCredits").textContent = totalCredits;
+
+        
     }
     
     // Event listeners for the filter buttons
-    document.getElementById('filter-btn').addEventListener('click', () => displayCourses('All'));
-    document.getElementById('filter-btn').addEventListener('click', () => displayCourses('CSE'));
-    document.getElementById('filter-btn').addEventListener('click', () => displayCourses('WDD'));
+    document.getElementById('all-btn').addEventListener('click', () => displayCourses('all'));
     
-    // Initially display all courses
-    displayCourses('all');
-    displayCourses('cse');
-    displayCourses('wdd');
-    
+
+        
