@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         filteredCourses.forEach(course => {
             const courseCard = document.createElement('div');
             courseCard.className = `course-card ${course.completed ? 'completed' : 'not-completed'}`;
-            courseCard.style.backgroundColor = course.completed && filter === 'all' ? 'chocolate' : 'lightgray';
+            courseCard.style.backgroundColor = course.completed && filter === 'all' ? 'navy' : 'gray';
 
             courseCard.innerHTML = `
              ${course.subject}

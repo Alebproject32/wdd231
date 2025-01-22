@@ -200,13 +200,7 @@
         width: 300px; 
     } 
     
-    .course-card.completed { 
-        border-left: 5px solid green; 
-    } 
     
-    .course-card.not-completed { 
-        border-left: 5px solid red; 
-    }
 
     footer {
         background: var(--background-gradient-fourth);
