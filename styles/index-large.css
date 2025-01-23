@@ -155,46 +155,44 @@
         border: none; 
         border-radius: 5px; 
         cursor: pointer; 
+        text-align: center;
     } 
 
      .card4, .filters, .courses, button {
         justify-content: center;
         align-items: center;
+        text-align: center;
      }
 
-    .courses {
-        display: flex;
-        justify-content: center;
-        
-         
-     }
 
      div p {
         color: #000;
      }
 
     .courses button {
-        background-color: lightseagreen;
+        text-align: center;
+        background-color: gray;
     } 
 
     .card4 button:hover { 
         background-color: chocolate; 
     } 
     
-    #courseContainer { 
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        padding: 20px; 
-    } 
-        
+    .container2, p {
+        text-align: center;
+        align-items: center;
+    }
+     
     .course-card { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px; 
+        text-align: center;
+        justify-content: center;
         background-color: white; 
         border-radius: 5px; 
         box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-        margin: 10px; 
-        padding: 20px; 
-        width: 300px; 
+        
     } 
     
     

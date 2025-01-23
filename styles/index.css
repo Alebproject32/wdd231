@@ -157,22 +157,20 @@
         border: none; 
         border-radius: 5px; 
         cursor: pointer; 
+        text-align: center;
     } 
 
     .container2 .card4 div .totalCredits p {
         color: #000;
     }
 
-     .card4 .courses, button {
-        justify-content: center;
-        align-items: center;
-    
-     }
-
-
-
     .courses button {
-        background-color: lightseagreen;
+        text-align: center;
+        background-color: gray;
+    } 
+
+    .course-card, button {
+        text-align: center;
     } 
 
     .card4 button:hover { 
@@ -181,27 +179,24 @@
 
     p {
         color: #000;
-        
+    }
+
+    .container2, p {
+        text-align: center;
+        align-items: center;
     }
     
-    #courseContainer { 
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        padding: 20px; 
-    } 
-        
+    
     .course-card { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px; 
+        justify-content: center;
         background-color: white; 
         border-radius: 5px; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-        margin: 10px; 
-        padding: 20px; 
-        width: 300px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     } 
     
-    
-
     footer {
         background: var(--background-gradient-fourth);
         text-align: center;
