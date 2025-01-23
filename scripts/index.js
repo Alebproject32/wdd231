@@ -75,41 +75,44 @@ document.addEventListener("DOMContentLoaded", function () {
         const courseContainer = document.getElementById('courseContainer');
         courseContainer.innerHTML = '';
         
-        let filteredCourses = courses;
-        if (filter !== 'all') {
-            filteredCourses = courses.filter(course => course.subject === filter);
-        }
+        const filteredCourses = filter === 'all'
+            ? courses 
+            : courses.filter(course => course.subject === filter);
 
 
         let totalCredits = 0;
         
         filteredCourses.forEach(course => {
-            const courseCard = document.createElement('div');
+            const courseCard = document.createElement('button');
             courseCard.className = `course-card ${course.completed ? 'completed' : 'not-completed'}`;
-            courseCard.style.backgroundColor = course.completed && filter === 'all' ? 'navy' : 'gray';
+            
+            if (course.completed) {
+                courseCard.style.backgroundColor = 'chocolate';
+            } else {
+                courseCard.style.backgroundColor = 'lightgray';
+            }
 
-            courseCard.innerHTML = `
-             ${course.subject}
-             ${course.number}
-        `;
+            courseCard.innerHTML = `${course.subject} ${course.number}`;
     
-        courseContainer.appendChild(courseCard);
-        if (course.completed) {
-            totalCredits += course.credits;
-        }
-    });
+            courseContainer.appendChild(courseCard);
+            
+            if (course.completed) {
+                totalCredits += course.credits;
+            }
+        });
         
         document.getElementById("totalCredits").textContent = totalCredits;
 
         
     }
 
-    // Initially display all courses
-    displayCourses('all');
     
     // Event listeners for the filter buttons
     document.getElementById('all-btn').addEventListener('click', () => displayCourses('all'));
     document.getElementById('cse-btn').addEventListener('click', () => displayCourses('CSE'));
     document.getElementById('wdd-btn').addEventListener('click', () => displayCourses('WDD'));
+
+    // Initially display all courses
+    displayCourses('all');
     
     
