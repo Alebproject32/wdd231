@@ -87,15 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
             courseCard.className = `course-card ${course.completed ? 'completed' : 'not-completed'}`;
             
             if (course.completed) {
-                courseCard.style.backgroundColor = 'chocolate';
+                courseCard.style.backgroundColor = 'navy';
             } else {
-                courseCard.style.backgroundColor = 'lightgray';
+                courseCard.style.backgroundColor = 'gray';
             }
 
             courseCard.innerHTML = `${course.subject} ${course.number}`;
     
             courseContainer.appendChild(courseCard);
-            
+
             if (course.completed) {
                 totalCredits += course.credits;
             }
