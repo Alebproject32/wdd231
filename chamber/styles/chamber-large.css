@@ -1,0 +1,106 @@
+@media only screen and (min-width: 768px) {
+    :root {
+        --background-color-primary: white;
+        --background-color-secondary: gray;
+        --background-color-third: lightgray;
+        --background-color-fourth: black 90%;
+    }
+
+    body {
+        background: var(--background-color-primary);
+    }
+
+    header, .box {
+        background: var(--background-color-secondary);
+        
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .Hero {
+        background: var(--background-color-third);
+        margin-right: 80px;
+        margin-left: 80px;
+        height: 250px;
+    }
+
+    button {
+        display: flex;
+    }
+
+    h1 {
+        margin-left: 120px;
+    }
+
+    h2 {
+        background: var(--background-color-fourth);
+        color: aliceblue;
+        font-weight: lighter;
+        padding: 5px;
+        margin: 2px;
+    }
+
+    .box2 {
+        background: var(--background-color-third);
+        width: 700px;
+        height: 300px;
+    }
+
+    .box3 {
+        background: var(--background-color-third);
+        width: 200px;
+        height: 300px;
+    }
+
+    .box4 {
+        background: var(--background-color-third);
+        width: 200px;
+        height: 300px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4%;
+        margin-left: 9%;
+        margin-right: 70%;
+    }
+
+    .card {
+        background: var(--background-color-third);
+        width: 280px;
+        height: 250px;
+        padding: 5px;
+        margin-top: 10%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+    }
+
+    h3, h4, .card {
+        text-align: center;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 10%;
+        
+    }
+
+    .square img {
+        background: var(--background-color-secondary);
+        width: 20px;
+    }
+
+    footer {
+        background: var(--background-color-secondary);
+        height: 80px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
