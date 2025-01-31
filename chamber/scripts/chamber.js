@@ -9,49 +9,59 @@ document.addEventListener("DOMContentLoaded", function () {
     lastModifiedElement.textContent = "Last Modified: " + document.lastModified;});
 
 // script.js
-const apiKey = d3ce4ec093c6de16cf9259eddc4866;
-const city = Caracas; 
+const apiKey = '9ed3ce4ec093c6de16cf9259eddc4866';
+const city = 'Caracas'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     getCurrentWeather();
     getWeatherForecast();
 });
 
-function getCurrentWeather() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-            const weatherInfo = `
-                <div class="box3">
-                    <p>Temperature: ${data.main.temp}°C</p>
-                    <p>Condition: ${data.weather[0].description}</p>
-                    <p>High: ${data.main.temp_max}°C</p>
-                    <p>Low: ${data.main.temp_min}°C</p>
-                    <p>Humidity: ${data.main.humidity}%</p>
-                    <p>Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
-                    <p>Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
-                </div>
-            `;
-            document.getElementById('box3').innerHTML = weatherInfo;
-        })
-        .catch(error => console.error('Error fetching current weather:', error));
+async function getCurrentWeather() {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        
+        const weatherInfo = `
+            <div class="box3">
+                <p>Temperature: ${data.main.temp}°C</p>
+                <p>Condition: ${data.weather[0].description}</p>
+                <p>High: ${data.main.temp_max}°C</p>
+                <p>Low: ${data.main.temp_min}°C</p>
+                <p>Humidity: ${data.main.humidity}%</p>
+                <p>Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                <p>Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+            </div>
+        `;
+        document.getElementById('weather-info').innerHTML = weatherInfo;
+    } catch (error) {
+        console.error('Error fetching current weather:', error);
+    }
 }
 
-function getWeatherForecast() {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-            let forecastInfo = '';
-            for (let i = 0; i < data.list.length; i += 8) {
-                forecastInfo += `
-                    <div class="box4">
-                        <p>Day: ${new Date(data.list[i].dt * 1000).toLocaleDateString()}</p>
-                        <p>Temperature: ${data.list[i].main.temp}°C</p>
-                        <p>Condition: ${data.list[i].weather[0].description}</p>
-                    </div>
-                `;
-            }
-            document.getElementById('box4').innerHTML = forecastInfo;
-        })
-        .catch(error => console.error('Error fetching weather forecast:', error));
+async function getWeatherForecast() {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        
+        let forecastInfo = '';
+        for (let i = 0; i < data.list.length; i += 8) {
+            forecastInfo += `
+                <div class="box4">
+                    <p>Day: ${new Date(data.list[i].dt * 1000).toLocaleDateString()}</p>
+                    <p>Temperature: ${data.list[i].main.temp}°C</p>
+                    <p>Condition: ${data.list[i].weather[0].description}</p>
+                </div>
+            `;
+        }
+        document.getElementById('forecast-info').innerHTML = forecastInfo;
+    } catch (error) {
+        console.error('Error fetching weather forecast:', error);
+    }
 }
