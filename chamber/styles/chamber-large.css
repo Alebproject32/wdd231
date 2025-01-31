@@ -34,7 +34,6 @@
         margin-right: 80px;
         margin-left: 80px;
         height: 250px;
-        
     }
 
     button {
@@ -63,6 +62,10 @@
         background: var(--background-color-third);
         width: 200px;
         height: 300px;
+    }
+
+    .box3 p {
+        justify-content: bottom;
     }
 
     .box4 {

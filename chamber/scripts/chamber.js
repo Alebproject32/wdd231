@@ -26,7 +26,7 @@ async function getCurrentWeather() {
         const data = await response.json();
         
         const weatherInfo = `
-            <div class="box3">
+            <div id="weather-info">
                 <p>Temperature: ${data.main.temp}°C</p>
                 <p>Condition: ${data.weather[0].description}</p>
                 <p>High: ${data.main.temp_max}°C</p>
@@ -52,13 +52,14 @@ async function getWeatherForecast() {
         
         let forecastInfo = '';
         for (let i = 0; i < data.list.length; i += 8) {
+            if (i <= 16) {
             forecastInfo += `
-                <div class="box4">
+                <div id="forecast-info">
                     <p>Day: ${new Date(data.list[i].dt * 1000).toLocaleDateString()}</p>
                     <p>Temperature: ${data.list[i].main.temp}°C</p>
-                    <p>Condition: ${data.list[i].weather[0].description}</p>
                 </div>
             `;
+            }
         }
         document.getElementById('forecast-info').innerHTML = forecastInfo;
     } catch (error) {
