@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lastModifiedElement.textContent = "Last Modified: " + document.lastModified;});
 
 // script.js
-const apiKey = openweathermap;
+const apiKey = d3ce4ec093c6de16cf9259eddc4866;
 const city = Caracas; 
 
 document.addEventListener('DOMContentLoaded', () => {
