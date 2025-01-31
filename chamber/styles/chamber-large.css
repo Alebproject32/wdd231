@@ -12,8 +12,17 @@
 
     header, .box {
         background: var(--background-color-secondary);
-        
         display: flex;
+    }
+
+    .box img {
+        margin: 2px;
+    }
+
+    img figcaption {
+        display: flex;
+        align-items: center;
+
     }
 
     .navbar {
@@ -25,6 +34,7 @@
         margin-right: 80px;
         margin-left: 80px;
         height: 250px;
+        
     }
 
     button {
@@ -98,9 +108,34 @@
 
     footer {
         background: var(--background-color-secondary);
-        height: 80px;
-        text-align: center;
-        justify-content: center;
+        padding: 10px;
+        white-space: ;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer .contact-info, .footer .social-media, .footer .project-info {
+        margin-bottom: 15px;
+    }
+
+    .footer .social-media a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .footer .social-media a:hover {
+        color: #007bff;
+    }
+    .footer .project-info {
+        font-size: 0.9em;
+        color: #6c757d;
+        text-align: left;
+    }
+
+    footer p {
+        color: aliceblue;
+        
     }
 }
 
