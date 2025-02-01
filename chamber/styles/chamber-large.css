@@ -10,7 +10,7 @@
         background: var(--background-color-primary);
     }
 
-    header, .box {
+    header, .box .navbar{
         background: var(--background-color-secondary);
         display: flex;
     }

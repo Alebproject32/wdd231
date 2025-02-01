@@ -39,6 +39,7 @@
     .Hero {
         background: var(--background-color-third);
         margin: 0 10px;
+        width: auto;
         height: auto;
     }
 
