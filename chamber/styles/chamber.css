@@ -11,6 +11,11 @@
         background: var(--background-color-primary);
     }
 
+    header nav ul li a {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     header, .box {
         background: var(--background-color-secondary);
         display: block;
@@ -28,20 +33,6 @@
         text-align: center;
     }
 
-    .navbar {
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .navbar ul a {
-        padding: 0;
-        list-style: none;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
 
     .Hero {
         background: var(--background-color-third);

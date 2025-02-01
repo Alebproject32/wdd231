@@ -64,9 +64,7 @@
         height: 300px;
     }
 
-    .box3 p {
-        justify-content: bottom;
-    }
+
 
     .box4 {
         background: var(--background-color-third);
@@ -112,7 +110,6 @@
     footer {
         background: var(--background-color-secondary);
         padding: 10px;
-        white-space: ;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
