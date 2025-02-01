@@ -70,6 +70,7 @@
         margin: 0 5%;
     }
 
+
     .card {
         background: var(--background-color-third);
         width: auto;
@@ -85,7 +86,7 @@
 
     .square img {
         background: var(--background-color-secondary);
-        width: 100%;
+        
     }
 
     footer {

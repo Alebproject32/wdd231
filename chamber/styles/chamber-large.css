@@ -65,7 +65,6 @@
     }
 
 
-
     .box4 {
         background: var(--background-color-third);
         width: 200px;
@@ -82,7 +81,7 @@
 
     .card {
         background: var(--background-color-third);
-        width: 280px;
+        width: 380px;
         height: 250px;
         padding: 5px;
         margin-top: 10%;
@@ -98,13 +97,30 @@
     .container2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-left: 10%;
-        
+        margin-left: 10px;
     }
 
     .square img {
         background: var(--background-color-secondary);
-        width: 20px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .square, img .text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .text p {
+        text-align: left;
+        
+    }
+
+    .card p {
+        margin-top: 0;
+        margin-bottom: 0;
+
     }
 
     footer {
