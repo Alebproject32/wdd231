@@ -30,11 +30,11 @@
 
     .navbar {
         justify-content: center;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .navbar ul {
+    .navbar ul a {
         padding: 0;
         list-style: none;
     }
