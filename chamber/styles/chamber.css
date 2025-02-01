@@ -1,4 +1,4 @@
-/* CSS para dispositivos móviles */
+
 @media only screen and (max-width: 767px) {
     :root {
         --background-color-primary: white;
@@ -12,8 +12,8 @@
     }
 
     header nav ul li a {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: block;
+        width: 100%;
     }
 
     header, .box {
@@ -26,13 +26,15 @@
     .box img {
         margin: auto;
         display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     img figcaption {
         display: block;
         text-align: center;
     }
-
 
     .Hero {
         background: var(--background-color-third);
@@ -70,7 +72,6 @@
         margin: 0 5%;
     }
 
-
     .card {
         background: var(--background-color-third);
         width: auto;
@@ -86,7 +87,9 @@
 
     .square img {
         background: var(--background-color-secondary);
-        
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     footer {
@@ -118,5 +121,4 @@
     .footer .social-media a:hover {
         color: #007bff;
     }
-
 }
