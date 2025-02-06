@@ -100,6 +100,21 @@
         margin-left: 10px;
     }
 
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 20%;
+        height: 30px;
+        margin-left: 80px;
+    }
+
+
+    button .grid-view .list-view {
+        text-align: center;
+        vertical-align: middle;
+    }
+
     .square img {
         background: var(--background-color-secondary);
         width: 80px;
@@ -109,6 +124,7 @@
     .square, img .text {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        
     }
 
 
