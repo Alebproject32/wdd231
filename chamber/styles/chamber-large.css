@@ -25,9 +25,6 @@
 
     }
 
-    .navbar {
-        justify-content: flex-end;
-    }
 
     .Hero {
         background: var(--background-color-third);
@@ -110,9 +107,39 @@
     }
 
 
-    button .grid-view .list-view {
-        text-align: center;
-        vertical-align: middle;
+    #member-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+        gap: 20px;
+    }
+    
+    .member-card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .member-card img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .card-content {  /* Style the content within the card */
+      flex-grow: 1; /* Allow content to take up available space */
+    }
+    
+    .member-list {
+        display: none; /* Initially hidden */
+    }
+    
+    .member-list-item {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
     }
 
     .square img {

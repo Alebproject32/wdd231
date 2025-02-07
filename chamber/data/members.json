@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Company A",
+      "address": "123 Main St",
+      "phone": "555-1234",
+      "website": "http://www.companya.com",
+      "image": "company_a.png",  
+      "membershipLevel": 3,
+      "otherInfo": "Some other info"
+    },
+    {
+      "name": "Company B",
+      "address": "456 Oak Ave",
+      "phone": "555-5678",
+      "website": "http://www.companyb.com",
+      "image": "company_b.jpg",
+      "membershipLevel": 2,
+      "otherInfo": "More details here"
+    },
+    {
+      "name": "Company C",
+      "address": "789 Pine Ln",
+      "phone": "555-9012",
+      "website": "http://www.companyc.com",
+      "image": "company_c.svg",
+      "membershipLevel": 1,
+      "otherInfo": "Even more details here"
+    },
+    {
+      "name": "Company D",
+      "address": "101 Elm St",
+      "phone": "555-3456",
+      "website": "http://www.companyd.com",
+      "image": "company_d.png",
+      "membershipLevel": 3,
+      "otherInfo": "Additional details"
+    },
+    {
+      "name": "Company E",
+      "address": "222 Maple Dr",
+      "phone": "555-7890",
+      "website": "http://www.companye.com",
+      "image": "company_e.jpg",
+      "membershipLevel": 2,
+      "otherInfo": "Further information"
+    },
+    {
+      "name": "Company F",
+      "address": "333 Birch Rd",
+      "phone": "555-0123",
+      "website": "http://www.companyf.com",
+      "image": "company_f.svg",
+      "membershipLevel": 1,
+      "otherInfo": "Extra details"
+    },
+    {
+      "name": "Company G",
+      "address": "444 Cedar Ct",
+      "phone": "555-4567",
+      "website": "http://www.companyg.com",
+      "image": "company_g.png",
+      "membershipLevel": 3,
+      "otherInfo": "Yet more details"
+    }
+  
+  ]
