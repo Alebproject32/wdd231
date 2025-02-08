@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    // Year and Date
+    // Year and Date 
     const currentYearSpan = document.getElementById('currentYear');
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastModifiedElement = document.getElementById('lastModified');
     lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
 
-    // Members Directory
+    // Members Directory 
     const members = await getMembers();
     let isGrid = true;
 
@@ -20,9 +20,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         toggleButton.textContent = isGrid ? "List View" : "Grid View";
     });
 
-    // Climate
+    // Climate 
     getCurrentWeather();
     getWeatherForecast();
+
+    // Spotlight Members 
+    const spotlightMembers = getSpotlightMembers(members); 
+    displaySpotlightMembers(spotlightMembers);
 });
 
 async function getMembers() {
@@ -146,29 +150,24 @@ async function getWeatherForecast() {
     }
 }
 document.addEventListener('DOMContentLoaded', async () => {
-    const members = await getMembers(); // Assuming you have this function to fetch data
+    const members = await getMembers();
     const spotlightMembers = getSpotlightMembers(members);
     displaySpotlightMembers(spotlightMembers);
 });
 
 function getSpotlightMembers(members) {
-    // Filter for Gold or Silver members
     const eligibleMembers = members.filter(member => 
         member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
     );
 
-    // Shuffle the array to randomize member order
     const shuffledMembers = eligibleMembers.sort(() => Math.random() - 0.5);
-
-    // Select 2 or 3 members randomly
-    const numSpotlights = Math.floor(Math.random() * 2) + 2; // 2 or 3
+    const numSpotlights = Math.floor(Math.random() * 2) + 2;
     return shuffledMembers.slice(0, numSpotlights);
 }
 
-
 function displaySpotlightMembers(spotlightMembers) {
-    const spotlightContainer = document.createElement('div'); // Create a container for spotlights
-    spotlightContainer.classList.add('spotlight-container'); // Add a class for styling
+    const spotlightContainer = document.createElement('div');
+    spotlightContainer.classList.add('spotlight-container');
 
     if (spotlightMembers.length === 0) {
         const noMembersMessage = document.createElement('p');
@@ -191,12 +190,10 @@ function displaySpotlightMembers(spotlightMembers) {
         });
     }
 
-    // Add the spotlight container to the page (replace with your actual container ID)
-    const container = document.querySelector('.container'); // Or wherever you want to put it
+    const container = document.querySelector('.container');
     if (container) {
-        container.insertBefore(spotlightContainer, container.firstChild); // Insert at the beginning
+        container.insertBefore(spotlightContainer, container.firstChild);
     } else {
         console.error("Container element not found.");
     }
-
 }

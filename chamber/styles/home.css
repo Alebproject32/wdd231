@@ -1,7 +1,8 @@
 
-/* Mobile Styles - Different from Desktop */
+/* Mobile Styles */
 @media only screen and (max-width: 767px) {
-    header, .box {
+    header,
+    .box {
         display: block;
         text-align: center;
         padding: 10px;
@@ -10,7 +11,7 @@
     .box img {
         margin: 0 auto;
         display: block;
-        max-width: 90%; /* Slightly smaller image on mobile */
+        max-width: 90%;
     }
 
     figcaption {
@@ -18,21 +19,20 @@
     }
 
     .navbar ul {
-        flex-direction: column; /* Vertical navigation */
+        flex-direction: column;
         align-items: center;
     }
 
     .navbar li {
         margin: 10px 0;
-        width: 100%; /* Full width nav items */
+        width: 100%;
     }
 
     .navbar a {
-        display: block; /* Make links fill the list item */
-        padding: 10px; /* Add some padding to the links */
-        text-align: center; /* Center the link text */
+        display: block;
+        padding: 10px;
+        text-align: center;
     }
-
 
     .Hero {
         margin: 0 10px;
@@ -40,23 +40,53 @@
     }
 
     .Hero img {
-      object-fit: contain; /* or cover */
+        object-fit: contain; 
     }
 
     h1 {
         margin: 20px 0;
     }
 
-    .box2, .box3, .box4 {
+    .box2,
+    .box3,
+    .box4 {
         margin: 10px;
         padding: 10px;
         max-width: 100%;
     }
 
-    .container, .container2, #member-grid {
+    .container,
+    .container2,
+    #member-grid {
         display: block;
         margin: 0 5%;
-        width: 100px;
+        width: auto; 
+    }
+
+    /* Styles for spotlight container and cards */
+    .spotlight-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 20px; 
+        margin-bottom: 20px; 
+    }
+
+    .spotlight-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%; 
+        max-width: 400px; 
+        text-align: center;
+        background-color: #f9f9f9; 
+        box-sizing: border-box; 
+    }
+
+    .spotlight-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .card {
@@ -75,7 +105,7 @@
         padding: 20px;
     }
 
-    footer > div {
+    footer>div {
         flex: 1 1 100%;
         margin: 10px 0;
     }
