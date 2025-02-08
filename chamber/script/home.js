@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    // Year and Date (Your existing code)
+    // Year and Date 
     const currentYearSpan = document.getElementById('currentYear');
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastModifiedElement = document.getElementById('lastModified');
     lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
 
-    // Members Directory (Your existing code)
+    // Members Directory 
     const members = await getMembers();
     let isGrid = true;
 
@@ -20,22 +20,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         toggleButton.textContent = isGrid ? "List View" : "Grid View";
     });
 
-    // Climate (Your existing code)
+    // Climate 
     getCurrentWeather();
     getWeatherForecast();
 
-    // Spotlight Members (Corrected and improved)
+    // Spotlight Members 
     const spotlightMembers = getSpotlightMembers(members);
     displaySpotlightMembers(spotlightMembers);
 
-    // Debugging: Check the data in the console
+
     console.log("Members data:", members);
     console.log("Spotlight members:", spotlightMembers);
 });
 
 async function getMembers() {
     try {
-        const response = await fetch("members.json"); // Corrected path if in same directory
+        const response = await fetch("members.json");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -154,13 +154,13 @@ async function getWeatherForecast() {
 }
 
 function getSpotlightMembers(members) {
-    // Corrected comparison: Use strings to match JSON data
+    
     const eligibleMembers = members.filter(member =>
         member.membershipLevel === 3 || member.membershipLevel === 2
     );
 
     const shuffledMembers = eligibleMembers.sort(() => Math.random() - 0.5);
-    const numSpotlights = Math.floor(Math.random() * 2) + 2; // Select 2 or 3
+    const numSpotlights = Math.floor(Math.random() * 2) + 2; 
     return shuffledMembers.slice(0, numSpotlights);
 }
 
