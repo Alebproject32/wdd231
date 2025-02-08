@@ -1,6 +1,18 @@
 
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
+    :root {
+        --background-color-primary: #001f3f;
+        --background-color-secondary: #d3d3d3;
+        --background-color-third: lightgray;
+        --background-color-fourth: rgba(0, 0, 0, 0.9);
+    }
+
+    body {
+        background-color: var(--background-color-primary);
+        margin: 0;
+    }
+
     header,
     .box {
         display: block;
@@ -21,6 +33,8 @@
     .navbar ul {
         flex-direction: column;
         align-items: center;
+        padding: 0; /* Reset default padding */
+        margin: 0; /* Reset default margin */
     }
 
     .navbar li {
@@ -32,6 +46,7 @@
         display: block;
         padding: 10px;
         text-align: center;
+        box-sizing: border-box; /* Include padding in width */
     }
 
     .Hero {
@@ -40,11 +55,15 @@
     }
 
     .Hero img {
-        object-fit: contain; 
+        width: 100%;
+        height: auto; /* Important for responsive images */
+        object-fit: cover; /* or contain, depending on desired effect */
     }
 
     h1 {
         margin: 20px 0;
+        text-align: center; /* Center the h1 on mobile */
+        color: white; /* Make sure h1 is visible against the background */
     }
 
     .box2,
@@ -52,51 +71,51 @@
     .box4 {
         margin: 10px;
         padding: 10px;
-        max-width: 100%;
+        width: auto; /* Make the boxes responsive */
+        box-sizing: border-box; /* Include padding in width */
     }
 
-    .container,
-    .container2,
-    #member-grid {
+    .container {
         display: block;
         margin: 0 5%;
-        width: auto; 
-    }
-
-    /* Styles for spotlight container and cards */
-    .spotlight-container {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 20px; 
-        margin-bottom: 20px; 
-    }
-
-    .spotlight-card {
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 5px;
-        width: 90%; 
-        max-width: 400px; 
-        text-align: center;
-        background-color: #f9f9f9; 
-        box-sizing: border-box; 
-    }
-
-    .spotlight-card img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
+        width: auto;
     }
 
     .card {
         margin: 10px 0;
+        box-sizing: border-box; /* Include padding in width */
     }
 
     .square img {
         width: 90px;
         height: 90px;
         object-fit: cover;
+    }
+
+    /* Spotlight Styles */
+    .spotlight-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .spotlight-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        width: 90%; /* Occupy most of the container width */
+        max-width: 400px; /* Set a maximum width */
+        text-align: center;
+        background-color: #f9f9f9;
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .spotlight-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     footer {
@@ -108,5 +127,6 @@
     footer>div {
         flex: 1 1 100%;
         margin: 10px 0;
+        box-sizing: border-box; /* Include padding in width */
     }
 }

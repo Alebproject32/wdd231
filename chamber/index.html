@@ -33,6 +33,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
+
   <body>
     <header>
       <div class="box">
@@ -97,10 +98,7 @@
       </section>
       <section class="member-grid">
         <h1>Chamber Members</h1>
-        <div class="spotlight-container">
-          <div class="spotlight-card">
-            <img src="member.jpg" alt="Nombre del miembro" width="200" height="150">
-          </div>
+        <div id="spotlight-container">
         </div>
       </section>
     </main>
@@ -125,7 +123,7 @@
       </div>
       <div class="project-info">
         <p>
-          <code>&copy;</code><span id="currentYear"></span>
+          <code>©</code><span id="currentYear"></span>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               var currentYear = new Date().getFullYear();

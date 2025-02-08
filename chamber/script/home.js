@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    // Year and Date 
+    // Year and Date (Your existing code)
     const currentYearSpan = document.getElementById('currentYear');
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const lastModifiedElement = document.getElementById('lastModified');
     lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
 
-    // Members Directory 
+    // Members Directory (Your existing code)
     const members = await getMembers();
     let isGrid = true;
 
@@ -20,18 +20,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         toggleButton.textContent = isGrid ? "List View" : "Grid View";
     });
 
-    // Climate 
+    // Climate (Your existing code)
     getCurrentWeather();
     getWeatherForecast();
 
-    // Spotlight Members 
-    const spotlightMembers = getSpotlightMembers(members); 
+    // Spotlight Members (Corrected and improved)
+    const spotlightMembers = getSpotlightMembers(members);
     displaySpotlightMembers(spotlightMembers);
+
+    // Debugging: Check the data in the console
+    console.log("Members data:", members);
+    console.log("Spotlight members:", spotlightMembers);
 });
 
 async function getMembers() {
     try {
-        const response = await fetch("data/members.json");
+        const response = await fetch("members.json"); // Corrected path if in same directory
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -39,8 +43,7 @@ async function getMembers() {
         return members;
     } catch (error) {
         console.error("Error fetching members:", error);
-        const memberGrid = document.getElementById('member-grid');
-        memberGrid.innerHTML = "<p>Error loading member data. Please try again later.</p>";
+        document.getElementById('spotlight-container').innerHTML = "<p>Error loading member data. Please try again later.</p>"; // Target spotlight container
         return [];
     }
 }
@@ -62,7 +65,7 @@ function displayMembers(members, isGrid) {
             const card = document.createElement('div');
             card.classList.add('member-card');
             card.innerHTML = `
-                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'" width="200" height="150">
                 <div class="card-content">
                     <h3>${member.name}</h3>
                     <p>${member.address}</p>
@@ -86,7 +89,7 @@ function displayMembers(members, isGrid) {
             const listItem = document.createElement('div');
             listItem.classList.add('member-list-item');
             listItem.innerHTML = `
-                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'" width="200" height="150">
                 <h3>${member.name}</h3>
                 <p>${member.address} | ${member.phone} | <a href="${member.website}" target="_blank">Website</a> | Membership: ${member.membershipLevel} ${member.otherInfo ? `| ${member.otherInfo}` : ''}</p>
             `;
@@ -149,51 +152,40 @@ async function getWeatherForecast() {
         console.error('Error fetching weather forecast:', error);
     }
 }
-document.addEventListener('DOMContentLoaded', async () => {
-    const members = await getMembers();
-    const spotlightMembers = getSpotlightMembers(members);
-    displaySpotlightMembers(spotlightMembers);
-});
 
 function getSpotlightMembers(members) {
-    const eligibleMembers = members.filter(member => 
-        member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
+    // Corrected comparison: Use strings to match JSON data
+    const eligibleMembers = members.filter(member =>
+        member.membershipLevel === 3 || member.membershipLevel === 2
     );
 
     const shuffledMembers = eligibleMembers.sort(() => Math.random() - 0.5);
-    const numSpotlights = Math.floor(Math.random() * 2) + 2;
+    const numSpotlights = Math.floor(Math.random() * 2) + 2; // Select 2 or 3
     return shuffledMembers.slice(0, numSpotlights);
 }
 
 function displaySpotlightMembers(spotlightMembers) {
-    const spotlightContainer = document.createElement('div');
-    spotlightContainer.classList.add('spotlight-container');
+    const spotlightContainer = document.getElementById('spotlight-container');
 
     if (spotlightMembers.length === 0) {
-        const noMembersMessage = document.createElement('p');
-        noMembersMessage.textContent = "No spotlight members available at this time.";
-        spotlightContainer.appendChild(noMembersMessage);
-    } else {
-        spotlightMembers.forEach(member => {
-            const card = document.createElement('div');
-            card.classList.add('spotlight-card');
+        spotlightContainer.innerHTML = "<p>No spotlight members available.</p>";
+        return;
+    }
 
-            card.innerHTML = `
+    let spotlightHTML = "";
+    spotlightMembers.forEach(member => {
+        spotlightHTML += `
+            <div class="spotlight-card">
                 <h3>${member.name}</h3>
-                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'" width="200" height="150">
                 <p>${member.address}</p>
                 <p>Phone: ${member.phone}</p>
                 <a href="${member.website}" target="_blank">Website</a>
                 <p>Membership: ${member.membershipLevel}</p>
-            `;
-            spotlightContainer.appendChild(card);
-        });
-    }
+                ${member.otherInfo ? `<p>${member.otherInfo}</p>` : ''} </div>
+        `;
+    });
 
-    const container = document.querySelector('.container');
-    if (container) {
-        container.insertBefore(spotlightContainer, container.firstChild);
-    } else {
-        console.error("Container element not found.");
-    }
+    spotlightContainer.innerHTML = spotlightHTML;
+    console.log("Spotlight container HTML:", document.getElementById('spotlight-container').innerHTML); // Check if HTML is being set
 }
