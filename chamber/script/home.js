@@ -187,5 +187,5 @@ function displaySpotlightMembers(spotlightMembers) {
     });
 
     spotlightContainer.innerHTML = spotlightHTML;
-    console.log("Spotlight container HTML:", document.getElementById('spotlight-container').innerHTML); // Check if HTML is being set
+    console.log("Spotlight container HTML:", document.getElementById('spotlight-container').innerHTML);
 }
