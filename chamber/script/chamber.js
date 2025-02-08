@@ -1,94 +1,100 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Set the current year
+document.addEventListener('DOMContentLoaded', async () => {
+    // Year and Date
     const currentYearSpan = document.getElementById('currentYear');
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
 
-    // Set the last modified date
-    const lastModifiedElement = document.getElementaryById('lastModified');
-    lastModifiedElement.textContent = "Last Modified: " + document.lastModified;});
+    const lastModifiedElement = document.getElementById('lastModified');
+    lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
 
-// Function to fetch member data from JSON
+    // Members Directory
+    const members = await getMembers();
+    let isGrid = true;
+
+    displayMembers(members, isGrid);
+
+    const toggleButton = document.getElementById('view-toggle');
+    toggleButton.addEventListener('click', () => {
+        isGrid = !isGrid;
+        displayMembers(members, isGrid);
+        toggleButton.textContent = isGrid ? "List View" : "Grid View";
+    });
+
+    // Climate
+    getCurrentWeather();
+    getWeatherForecast();
+});
+
 async function getMembers() {
     try {
         const response = await fetch("data/members.json");
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`); // Check for HTTP errors
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
         const members = await response.json();
         return members;
     } catch (error) {
         console.error("Error fetching members:", error);
-        return []; // Return an empty array in case of error
+        const memberGrid = document.getElementById('member-grid');
+        memberGrid.innerHTML = "<p>Error loading member data. Please try again later.</p>";
+        return [];
     }
 }
 
-// Function to display members in either grid or list view
 function displayMembers(members, isGrid) {
     const memberGrid = document.getElementById('member-grid');
     const memberList = document.getElementById('member-list');
 
-    memberGrid.innerHTML = ''; // Clear existing content
+    memberGrid.innerHTML = '';
     memberList.innerHTML = '';
 
     if (isGrid) {
         memberGrid.style.display = 'grid';
         memberList.style.display = 'none';
 
+        const fragment = document.createDocumentFragment();
+
         members.forEach(member => {
             const card = document.createElement('div');
-            card.classList.add('member-card'); // Add a class for styling
+            card.classList.add('member-card');
             card.innerHTML = `
-                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'"> </img> </img>  </img> <div class="card-content">
-                <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>Phone: ${member.phone}</p>
-                <a href="${member.website}" target="_blank">Website</a>
-                <p>Membership: ${member.membershipLevel}</p>
-                ${member.otherInfo ? `<p>${member.otherInfo}</p>` : ''} </div>
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
+                <div class="card-content">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>Phone: ${member.phone}</p>
+                    <a href="${member.website}" target="_blank">Website</a>
+                    <p>Membership: ${member.membershipLevel}</p>
+                    ${member.otherInfo ? `<p>${member.otherInfo}</p>` : ''}
+                </div>
             `;
-            memberGrid.appendChild(card);
+            fragment.appendChild(card);
         });
+
+        memberGrid.appendChild(fragment);
     } else {
         memberGrid.style.display = 'none';
         memberList.style.display = 'block';
 
+        const fragment = document.createDocumentFragment();
+
         members.forEach(member => {
             const listItem = document.createElement('div');
-            listItem.classList.add('member-list-item'); // Add a class for styling
+            listItem.classList.add('member-list-item');
             listItem.innerHTML = `
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
                 <h3>${member.name}</h3>
-                <p>${member.address} | ${member.phone} | <a href="${member.website}" target="_blank">Website</a> | Membership: ${member.membershipLevel}  ${member.otherInfo ? `| ${member.otherInfo}` : ''}</p>
+                <p>${member.address} | ${member.phone} | <a href="${member.website}" target="_blank">Website</a> | Membership: ${member.membershipLevel} ${member.otherInfo ? `| ${member.otherInfo}` : ''}</p>
             `;
-            memberList.appendChild(listItem);
+            fragment.appendChild(listItem);
         });
+
+        memberList.appendChild(fragment);
     }
 }
 
-
-// Event listener for DOMContentLoaded
-document.addEventListener('DOMContentLoaded', async () => {
-    const members = await getMembers();
-    let isGrid = true; // Initial view is grid
-
-    displayMembers(members, isGrid); // Display initial view
-
-    const toggleButton = document.getElementById('view-toggle');
-    toggleButton.addEventListener('click', () => {
-        isGrid = !isGrid;
-        displayMembers(members, isGrid);
-        toggleButton.textContent = isGrid ? "List View" : "Grid View"; // Toggle button text
-    });
-});
-
-// script.js
 const apiKey = '9ed3ce4ec093c6de16cf9259eddc4866';
-const city = 'Caracas'; 
-
-document.addEventListener('DOMContentLoaded', () => {
-    getCurrentWeather();
-    getWeatherForecast();
-});
+const city = 'Caracas';
 
 async function getCurrentWeather() {
     try {
@@ -97,7 +103,7 @@ async function getCurrentWeather() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        
+
         const weatherInfo = `
             <div id="weather-info">
                 <p>Temperature: ${data.main.temp}°C</p>
@@ -122,16 +128,16 @@ async function getWeatherForecast() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        
+
         let forecastInfo = '';
         for (let i = 0; i < data.list.length; i += 8) {
             if (i <= 16) {
-            forecastInfo += `
-                <div id="forecast-info">
-                    <p>Day: ${new Date(data.list[i].dt * 1000).toLocaleDateString()}</p>
-                    <p>Temperature: ${data.list[i].main.temp}°C</p>
-                </div>
-            `;
+                forecastInfo += `
+                    <div class="forecast-day">
+                        <p>Day: ${new Date(data.list[i].dt * 1000).toLocaleDateString()}</p>
+                        <p>Temperature: ${data.list[i].main.temp}°C</p>
+                    </div>
+                `;
             }
         }
         document.getElementById('forecast-info').innerHTML = forecastInfo;

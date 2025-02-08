@@ -1,126 +1,82 @@
 
+/* Mobile Styles - Different from Desktop */
 @media only screen and (max-width: 767px) {
-    :root {
-        --background-color-primary: white;
-        --background-color-secondary: gray;
-        --background-color-third: lightgray;
-        --background-color-fourth: black;
-    }
-
-    body {
-        background: var(--background-color-primary);
-    }
-
-    header nav ul li a {
-        display: block;
-        width: 100%;
-    }
-
     header, .box {
-        background: var(--background-color-secondary);
         display: block;
         text-align: center;
         padding: 10px;
     }
 
     .box img {
-        margin: auto;
+        margin: 0 auto;
         display: block;
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
+        max-width: 90%; /* Slightly smaller image on mobile */
     }
 
-    img figcaption {
-        display: block;
+    figcaption {
         text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Vertical navigation */
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        width: 100%; /* Full width nav items */
+    }
+
+    .navbar a {
+        display: block; /* Make links fill the list item */
+        padding: 10px; /* Add some padding to the links */
+        text-align: center; /* Center the link text */
     }
 
 
     .Hero {
-        background: var(--background-color-third);
         margin: 0 10px;
-        width: auto;
         height: auto;
     }
 
-    button {
-        display: block;
-        margin: 10px auto;
+    .Hero img {
+      object-fit: contain; /* or cover */
     }
 
     h1 {
         margin: 20px 0;
     }
 
-    h2 {
-        background: var(--background-color-fourth);
-        color: aliceblue;
-        font-weight: lighter;
-        padding: 5px;
-        margin: 2px;
-    }
-
     .box2, .box3, .box4 {
-        background: var(--background-color-third);
-        width: auto;
-        height: auto;
         margin: 10px;
         padding: 10px;
+        max-width: 100%;
     }
 
-    .container, .container2 {
+    .container, .container2, #member-grid {
         display: block;
         margin: 0 5%;
+        width: 100px;
     }
 
     .card {
-        background: var(--background-color-third);
-        width: auto;
-        height: auto;
-        padding: 10px;
         margin: 10px 0;
-        border-radius: 10px;
-    }
-
-    h3, h4, .card {
-        text-align: center;
     }
 
     .square img {
-        background: var(--background-color-secondary);
-        width: 100%;
-        height: auto;
+        width: 90px;
+        height: 90px;
         object-fit: cover;
     }
 
     footer {
-        background: var(--background-color-secondary);
+        flex-direction: column;
+        align-items: center;
         padding: 20px;
-        display: block;
-        text-align: center;
     }
 
-    .footer .contact-info, .footer .social-media, .footer .project-info {
-        margin: 15px 0;
-    }
-
-    .footer .social-media ul {
-        padding: 0;
-        list-style: none;
-    }
-
-    .footer .social-media ul li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    .footer .social-media a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .footer .social-media a:hover {
-        color: #007bff;
+    footer > div {
+        flex: 1 1 100%;
+        margin: 10px 0;
     }
 }

@@ -39,8 +39,10 @@
         <figure>
           <img
             src="images/Hotel-Humboldt-Chamber-of-Commerce.jpg"
-            alt="name of image or logo of Chamber Directory Page"
+            alt="Logo de la Cámara de Comercio Hotel Humboldt"
             width="100"
+            height="100"
+            loading="lazy"
           />
           <figcaption>Hotel Humboldt Chamber of Commerce</figcaption>
         </figure>
@@ -60,9 +62,10 @@
       <div class="Hero">
         <img
           src="images/Chamber_of_Commerce.jpg"
-          alt="scalable reponsive hero image"
-          width="1170"
+          alt="Imagen principal de la Cámara de Comercio"
+          width="1000"
           height="250"
+          loading="lazy"
         />
         <button id="click">Keynote Tickets</button>
       </div>
@@ -80,11 +83,12 @@
           <div id="forecast-info"></div>
         </div>
       </section>
-      <h1>Member Directory</h1>
-      <button id="view-toggle">List View</button>  
-      <div id="member-grid"></div>
-      <div id="member-list"></div>
-      </button>
+      <section class="member-grid">
+        <h1>Member Directory</h1>
+        <button id="view-toggle">List View</button>
+        <div id="member-grid"></div>
+        <div id="member-list"></div>
+      </section>
     </main>
     <footer>
       <div class="contact-info">
@@ -95,19 +99,19 @@
         <p>(223) 555-2300</p>
       </div>
       <div class="social-media">
-        <a href="https://www.youtube.com" target="_blank"
+        <a href="https://www.youtube.com" target="_blank" rel="noopener"
           ><i class="fab fa-youtube"></i> YouTube</a
         >
-        <a href="https://www.twitter.com" target="_blank"
+        <a href="https://www.twitter.com" target="_blank" rel="noopener"
           ><i class="fab fa-twitter"></i> Twitter</a
         >
-        <a href="https://www.linkedin.com" target="_blank"
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener"
           ><i class="fab fa-linkedin"></i> LinkedIn</a
         >
       </div>
       <div class="project-info">
         <p>
-          <code>&#169; </code><span id="currentYear"></span>
+          <code>&copy;</code><span id="currentYear"></span>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               var currentYear = new Date().getFullYear();
