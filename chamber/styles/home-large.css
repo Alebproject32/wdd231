@@ -1,0 +1,259 @@
+@media only screen and (min-width: 768px) {
+    :root {
+        --background-color-primary:  #001f3f;
+        --background-color-secondary: #d3d3d3;
+        --background-color-third: lightgray;
+        --background-color-fourth: rgba(0, 0, 0, 0.9); /* Use rgba for opacity */
+    }
+    
+    body {
+        background-color: var(--background-color-primary); /* Simplified */
+        margin: 0; /* Reset default body margins */
+    }
+    
+    header,
+    .box .navbar {
+        background-color: var(--background-color-secondary); /* Simplified */
+        display: flex;
+        align-items: center; /* Vertically center items */
+        justify-content: space-between; /* Distribute items horizontally */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .navbar li {
+        margin: 0 10px;
+    }
+
+    .box figure {
+        display: flex;
+        align-items: center;
+    }
+    
+    .box img {
+        margin-right: 10px;
+    }
+    
+    figcaption {
+        display: flex;
+        align-items: center;
+    }
+    
+    .Hero {
+        background-color: var(--background-color-third); /* Simplified */
+        margin: 0 80px; /* Shorthand for margins */
+        height: 250px;
+        overflow: hidden; /* Hide overflowing content */
+    }
+    
+    .Hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Fit image to container */
+    }
+    
+    button {
+        display: block; /* Make button take full width */
+        margin: 20px auto; /* Center the button */
+        padding: 10px 20px;
+        background-color: #007bff; /* Example color */
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    h1 {
+        color: #ffffff;
+        margin-left: 120px;
+    }
+    
+    h2 {
+        background-color: var(--background-color-fourth); /* Simplified */
+        color: #ffffff;
+        font-weight: lighter;
+        padding: 5px;
+        margin: 2px;
+    }
+    
+    .box2,
+    .box3,
+    .box4 {
+        background-color: var(--background-color-third); /* Simplified */
+        height: 300px;
+    }
+    
+    .box2 {
+        width: 700px;
+    }
+    
+    .box3,
+    .box4 {
+        width: 200px;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4%;
+        margin: 0 auto; /* Center the container */
+        max-width: 1200px; /* Set a maximum width for the container */
+    }
+    
+    .card {
+        background-color: var(--background-color-third); /* Simplified */
+        padding: 5px;
+        margin: 10% 0 10px; /* Shorthand for margins */
+        border-radius: 10px;
+        text-align: center; /* Center text */
+    }
+    
+    .card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .card h3,
+    .card p {
+        margin: 0; /* Reset margins */
+    }
+    
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 10px; /* Shorthand for margins */
+    }
+    
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 20%;
+        margin: 20px auto; /* Center */
+    }
+    
+    #member-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .member-card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        margin-bottom: 15px;
+    }
+    
+    .member-card img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    
+    .card-content {
+        flex-grow: 1;
+    }
+    
+    .member-list {
+        display: none;
+    }
+    
+    .member-list-item {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+        color: white;
+    }
+    
+    .member-list-item img {
+        background-color: var(--background-color-secondary); /* Simplified */
+        width: 70px;
+        height: 70px;
+    }
+    
+    .square,
+    .text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .text p {
+        text-align: left;
+    }
+
+    .spotlight-container {
+        display: flex; /* Or grid if you prefer */
+        flex-wrap: wrap; /* Allow wrapping to new lines */
+        justify-content: center; /* Center the cards horizontally */
+        gap: 20px; /* Space between cards */
+        margin-bottom: 20px; /* Space below the spotlights */
+    }
+    
+    .spotlight-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        width: 300px; /* Adjust as needed */
+        text-align: center;
+        background-color: #f9f9f9; /* Example background color */
+    }
+    
+    .spotlight-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    
+    footer {
+        background-color: var(--background-color-secondary); /* Simplified */
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; /* Space between columns */
+        align-items: center;
+    }
+    
+    footer > div { /* Styles for divs inside footer */
+        margin-bottom: 15px;
+    }
+    
+    footer p {
+        color: black;
+        margin: 0; /* Reset margins */
+    }
+    
+    .project-info {
+        font-size: 0.9em;
+        color: #6c757d;
+        text-align: left;
+    }
+    
+    .social-media a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .social-media a:hover {
+        color: #007bff;
+    }
+}
+

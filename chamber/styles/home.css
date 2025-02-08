@@ -1,0 +1,82 @@
+
+/* Mobile Styles - Different from Desktop */
+@media only screen and (max-width: 767px) {
+    header, .box {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .box img {
+        margin: 0 auto;
+        display: block;
+        max-width: 90%; /* Slightly smaller image on mobile */
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Vertical navigation */
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        width: 100%; /* Full width nav items */
+    }
+
+    .navbar a {
+        display: block; /* Make links fill the list item */
+        padding: 10px; /* Add some padding to the links */
+        text-align: center; /* Center the link text */
+    }
+
+
+    .Hero {
+        margin: 0 10px;
+        height: auto;
+    }
+
+    .Hero img {
+      object-fit: contain; /* or cover */
+    }
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    .box2, .box3, .box4 {
+        margin: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .container, .container2, #member-grid {
+        display: block;
+        margin: 0 5%;
+        width: 100px;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .square img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    footer > div {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}

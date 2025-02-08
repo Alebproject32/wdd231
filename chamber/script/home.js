@@ -145,3 +145,58 @@ async function getWeatherForecast() {
         console.error('Error fetching weather forecast:', error);
     }
 }
+document.addEventListener('DOMContentLoaded', async () => {
+    const members = await getMembers(); // Assuming you have this function to fetch data
+    const spotlightMembers = getSpotlightMembers(members);
+    displaySpotlightMembers(spotlightMembers);
+});
+
+function getSpotlightMembers(members) {
+    // Filter for Gold or Silver members
+    const eligibleMembers = members.filter(member => 
+        member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
+    );
+
+    // Shuffle the array to randomize member order
+    const shuffledMembers = eligibleMembers.sort(() => Math.random() - 0.5);
+
+    // Select 2 or 3 members randomly
+    const numSpotlights = Math.floor(Math.random() * 2) + 2; // 2 or 3
+    return shuffledMembers.slice(0, numSpotlights);
+}
+
+
+function displaySpotlightMembers(spotlightMembers) {
+    const spotlightContainer = document.createElement('div'); // Create a container for spotlights
+    spotlightContainer.classList.add('spotlight-container'); // Add a class for styling
+
+    if (spotlightMembers.length === 0) {
+        const noMembersMessage = document.createElement('p');
+        noMembersMessage.textContent = "No spotlight members available at this time.";
+        spotlightContainer.appendChild(noMembersMessage);
+    } else {
+        spotlightMembers.forEach(member => {
+            const card = document.createElement('div');
+            card.classList.add('spotlight-card');
+
+            card.innerHTML = `
+                <h3>${member.name}</h3>
+                <img src="${member.image}" alt="${member.name} Logo" onerror="this.src='placeholder.png'">
+                <p>${member.address}</p>
+                <p>Phone: ${member.phone}</p>
+                <a href="${member.website}" target="_blank">Website</a>
+                <p>Membership: ${member.membershipLevel}</p>
+            `;
+            spotlightContainer.appendChild(card);
+        });
+    }
+
+    // Add the spotlight container to the page (replace with your actual container ID)
+    const container = document.querySelector('.container'); // Or wherever you want to put it
+    if (container) {
+        container.insertBefore(spotlightContainer, container.firstChild); // Insert at the beginning
+    } else {
+        console.error("Container element not found.");
+    }
+
+}
