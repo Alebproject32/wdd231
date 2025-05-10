@@ -1,0 +1,63 @@
+/* Styles for smaller screens (mobiles - up to 768px width) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the panels vertically */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .left-panel, .right-panel {
+        flex: 1; /* Both panels take equal width */
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        display: block; /* Display navigation links on separate lines */
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .certificate-buttons {
+        display: flex;
+        flex-direction: column; /* Stack the buttons vertically */
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .certificate-buttons button {
+        padding: 10px 20px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #5cb85c;
+        color: white;
+        cursor: pointer;
+        width: 80%; /* Make buttons take more width */
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+        gap: 10px;
+    }
+
+    .course-box {
+        padding: 10px; /* Reduce padding on small screens */
+        font-size: 0.9em; /* Reduce text size */
+    }
+}
+
+/* Additional styles for very small screens (up to 480px) - Optional */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+}
