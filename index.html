@@ -3,10 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD 231</title>
+    <title>Alejandro I. Perez B.</title>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <h1>WDD 231 - Alejandro Pérez</h1>
-    <h2>This is a practice of my Github repository</h2>
+    <header>
+      <h1>Alejandro I. Perez B.</h1>
+    </header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Chamber</a>
+      <a href="#">Final</a>
+      <a href="#">GitHub Profile</a>
+      <a href="#">LinkedIn</a>
+    </nav>
+
+    <div class="container">
+      <div class="left-panel">
+        <h2>Course Work</h2>
+        <ul>
+          <li>...</li>
+          <li>...</li>
+          <li>...</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <h2>Caracas, Venezuela</h2>
+        <img src="images/Avila-Mountain.webp" alt="Ávila Mountain"/>
+      </div>
+    </div>
+
+    <div class="certificate-section">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="certificate-buttons">
+        <button>All</button>
+        <button>CSE</button>
+        <button>WDD</button>
+      </div>
+      <div class="courses-grid">
+        <div class="course-box">CSE 111</div>
+        <div class="course-box">WDD 130</div>
+        <div class="course-box">CSE 110</div>
+        <div class="course-box">CSE 210</div>
+        <div class="course-box">WDD 131</div>
+        <div class="course-box">WDD 231</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2025 Alejandro I. Perez B. - Caracas, Venezuela
+        <span class="flag"></span>
+      </p>
+      <p id="datetime"></p>
+    </footer>
+
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, "0");
+        const day = now.getDate().toString().padStart(2, "0");
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById(
+          "datetime"
+        ).textContent = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    </script>
   </body>
 </html>
