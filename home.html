@@ -23,42 +23,46 @@
   </head>
   <body>
     <header>
-      <img src="images/Photo_Ale.webp" alt="My Photo" />
+      <img
+        src="images/Photo_Ale.webp"
+        alt="My Photo"
+        style="
+          width: 100px;
+          height: 140px;
+          border-radius: 10%;
+          object-fit: cover;
+          float: left;
+        "
+      />
       <span class="name-header">Alejandro I. Pérez B.</span>
       <div style="clear: both"></div>
     </header>
 
     <nav>
-      <a href="http://127.0.0.1:5500/wdd231/index.html">Home</a>
-      <a href="#">Chamber</a>
-      <a href="#">Final</a>
-      <a href="https://github.com/Alebproject32" target="_blank"
-        >GitHub Profile</a
-      >
-      <a
-        href="https://www.linkedin.com/in/alejandro-isaac-pérez-brito-755293157"
-        target="_blank"
-        >LinkedIn</a
-      >
-    </nav>
+    <a href="#">Home</a>
+    <a href="#">Chamber</a>
+    <a href="#">Final</a>
+    <a href="https://github.com/Alebproject32" target="_blank">GitHub Profile</a>
+    <a href="https://www.linkedin.com/in/alejandro-isaac-pérez-brito-755293157" target="_blank">LinkedIn</a>
+</nav>
 
     <main>
-      <h1>Home</h1>
       <div class="container">
-        <section class="course-work-section">
+        <div class="left-panel">
           <h2>Course Work</h2>
           <ul>
             <li>...</li>
             <li>...</li>
             <li>...</li>
           </ul>
-        </section>
-        <section class="caracas-section">
+        </div>
+        <div class="right-panel">
           <h2>Caracas, Venezuela</h2>
           <img src="images/Avila-Mountain.webp" alt="Ávila Mountain" />
-        </section>
+        </div>
       </div>
-      <section class="certificate-section">
+
+      <div class="certificate-section">
         <h2>Web and Computer Programming Certificate</h2>
         <div class="certificate-buttons">
           <button>All</button>
@@ -73,30 +77,18 @@
           <div class="course-box">WDD 131</div>
           <div class="course-box">WDD 231</div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>
       <p>
-        &copy; <span id="currentyear"></span> Alejandro I. Perez B. - Caracas,
-        Venezuela <span class="flag"></span>
+        &copy; 2025 Alejandro I. Perez B. - Caracas, Venezuela
+        <span class="flag"></span>
       </p>
-      <p id="lastModified"></p>
+      <p id="datetime"></p>
     </footer>
 
     <script>
-      // JavaScript recently year
-      document.addEventListener("DOMContentLoaded", function () {
-        const currentYearSpan = document.getElementById("currentyear");
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-
-        // JavaScript last modified date
-        const lastModifiedParagraph = document.getElementById("lastModified");
-        const lastModifiedDate = new Date(document.lastModified);
-        lastModifiedParagraph.textContent = `Last Update: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
-      });
-
       function updateDateTime() {
         const now = new Date();
         const year = now.getFullYear();
