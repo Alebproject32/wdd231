@@ -1,16 +1,29 @@
 /* Styles for smaller screens (mobiles - up to 768px width) */
 @media (max-width: 768px) {
+    :root {
+    --beige-light: #F5F5DC; /* Light beige */
+    --beige-medium: #E0CBA8; /* Medium beige */
+    --brown-light: #A0522D; /* Light brown */
+    --brown-dark: #654321; /* Dark brown */
+    --wine-red: #800020; /* Wine red */
+    --gray-marble: #b9b4b1; /* Gray marble */
+    --green-olive: #6B8E23; /* Green Olive */
+  }
     body {
-        font-family: sans-serif;
-        margin: 0;
+        font-family: "Barlow", sans-serif;
+        font-weight: 400;
+        margin: 10px;
         padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
+        background-color: var(--beige-light); /* Light beige background */
+        color: var(--brown-dark); /* Dark brown text */
+        overflow-x: hidden;
     }
 
     header {
-        background-color: #0056b3;
-        color: white;
+        background-color: var(--beige-medium); /* Medium beige section background */
+        font-size: 300;
+        font-style: italic;
+        color: var(--wine-red);
         padding: 15px;
         text-align: center;
         display: flex; /* Enable flexbox for header content alignment */
@@ -21,29 +34,89 @@
     header img {
         width: 80px;
         height: 80px;
-        border-radius: 50%;
+        border-radius: 10%;
         object-fit: cover;
         margin-bottom: 10px; /* Add margin below the image */
         margin-right: 0; /* Remove right margin for stacked layout */
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+        border: 1px solid var(--gray-marble); /* Adds a light beige border for a slight highlight/separation */
     }
 
     header span.nombre-header {
         font-size: 1.2em; /* Adjust font size for small screens */
-        color: white; /* Example text color */
+        color: var(--wine-red); /* Wine red name */   
+        font-family: "Barlow", sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        margin-left: 0;
+
     }
 
     nav {
-        background-color: #333;
-        color: white;
+        background-color: var(--brown-dark); /* Dark brown navigation background */
+        color: var(--beige-light); /* Light beige navigation text */
         padding: 10px 0;
         text-align: center;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
     }
 
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .bar {
+        width: 35px;
+        height: 5px;
+        background-color: var(--brown-dark);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        background-color: var(--gray-marble);
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 99; 
+    }
+
+      .nav-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+      .nav-menu li {
+        margin-bottom: 10px;
+    }
+    .nav-menu a {
+        text-decoration: none;
+        color: var(--brown-dark);
+        font-weight: bold;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
     nav a {
+        color: var(--beige-light); /* Light beige link color */
+        text-decoration: none;
         display: block; /* Display navigation links on separate lines */
         margin: 5px 0;
         padding: 10px;
         border-radius: 0;
+        text-align: center;
     }
 
     main {
@@ -54,27 +127,34 @@
         text-align: left; /* Align text to the left on small screens */
         margin-top: 10px; /* Add some top margin */
         margin-bottom: 15px; /* Add some space below the title */
+        color: var(--brown-dark); /* Dark brown heading */
     }
 
     .container {
         flex-direction: column; /* Stack the panels vertically */
         gap: 10px;
+        padding: 10px;
+        width: 87%;
     }
 
     .course-work-section,
     .caracas-section {
-        background-color: white;
+        background-color: var(--beige-medium);
+        color: var(--wine-red);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .caracas-section img {
-        width: 100%;
+        width: 90%;
         max-height: 200px; /* Adjust max height for smaller screens */
         object-fit: cover;
         border-radius: 5px;
+        background-color: var(--beige-medium);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .certificate-section {
@@ -83,11 +163,14 @@
         margin-top: 20px; /* Add some space above the certificate section */
         border-radius: 8px;
         text-align: center;
+        width: 90%;
     }
 
     .certificate-section h2 {
         margin-top: 0; /* Remove default top margin for section title */
         margin-bottom: 15px;
+        background-color: var(--beige-light);
+        color: var(--wine-red);
     }
 
     .certificate-buttons {
@@ -98,17 +181,16 @@
     }
 
     .certificate-buttons button {
-        padding: 10px 20px;
+        padding: 10px;
         margin: 5px 0;
-        border: none;
+        width: 100%; /* Make buttons take more width */
+        background-color: var(--wine-red); /* Wine red button background */
+        color: var(--beige-light); /* Light beige button text */
         border-radius: 5px;
-        background-color: #5cb85c;
-        color: white;
-        cursor: pointer;
-        width: 80%; /* Make buttons take more width */
     }
 
     .courses-grid {
+        display: grid;
         grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
         gap: 10px;
     }
@@ -116,15 +198,18 @@
     .course-box {
         padding: 10px; /* Reduce padding on small screens */
         font-size: 0.9em; /* Reduce text size */
+        color: var(--beige-light); /* Dark brown course box text */
+        background-color: var(--green-olive);
+        border-radius: 5px;
     }
 
     footer {
-        background-color: #333;
-        color: white;
+        background-color: var(--brown-dark); /* Dark brown footer background */
+        color: var(--beige-light); /* Light beige footer text */
         text-align: center;
         padding: 10px;
         bottom: 0;
-        width: 100%;
+        width: 95%;
         font-size: 0.8em;
         margin-top: 20px; /* Add some space above the footer */
     }
@@ -152,6 +237,6 @@
     }
 
     h2 {
-        font-size: 1.4em;
+        font-size: 0.9em;
     }
 }

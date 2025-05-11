@@ -1,15 +1,29 @@
 /* Styles for larger screens (desktop default) AND smaller screens (from 320px up) */
 @media (min-width: 769px) { /* Apply these styles for larger screens */
+    :root {
+    --beige-light: #F5F5DC; /* Light beige */
+    --beige-medium: #E0CBA8; /* Medium beige */
+    --brown-light: #A0522D; /* Light brown */
+    --brown-dark: #654321; /* Dark brown */
+    --wine-red: #800020; /* Wine red */
+    --gray-marble: #b9b4b1; /* Gray marble */
+    --green-olive: #6B8E23; /* Green Olive */
+  }
+
     body {
-        font-family: sans-serif;
+        font-family: "Barlow", sans-serif;
+        font-weight: 400;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
+        background-color: var(--beige-light); /* Light beige background */
+        color: var(--brown-dark); /* Dark brown text */
+        overflow-x: hidden;
     }
 
     header {
-        background-color: #0056b3;
+        background-color: var(--beige-medium); /* Medium beige section background */
+        font-size: 300;
+        font-style: italic;
         color: white;
         padding: 20px;
         display: flex; /* Enable flexbox for header content alignment */
@@ -25,33 +39,51 @@
         object-fit: cover;
         margin-bottom: 10px; /* Add some space below the image */
         margin-right: 50px; /* Remove right margin */
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+        border: 1px solid var(--gray-marble); /* Adds a light beige border for a slight highlight/separation */
+  }
     }
 
     header span.name-header {
         font-size: 2.9em; /* Adjust font size for larger screens */
-        color: white; /* Example text color */   
+        color: var(--wine-red); /* Wine red name */   
+        font-family: "Barlow", sans-serif;
+        font-style: italic;
+        font-weight: 600;
+        margin-left: 0;
     }
 
     nav {
-        background-color: #333;
-        color: white;
+        background-color: var(--brown-dark); /* Dark brown navigation background */
+        color: var(--beige-light); /* Light beige navigation text */
         padding: 10px 20px;
         display: flex; /* Enable flexbox for navigation links */
         text-align: center;
         justify-content: space-around;
     }
 
+    nav ul {
+        list-style-type: none; /* Remove bullet points from the list */
+        padding: 0; /* Remove default padding for the list */
+        margin: 0; /* Remove default margin for the list */
+        display: flex; /* Enable Flexbox for the list items (links) */
+        gap: 20px; /* Add spacing between the links */
+    }
+
     nav a {
-        color: white;
+        color: var(--beige-light); /* Light beige link color */
         text-decoration: none;
         padding: 10px 20px;
         margin: 0 10px;
         border-radius: 5px;
         display: inline-block; /* Display navigation links inline on larger screens */
+        color: var(--beige-light);
     }
 
     nav a:hover {
-        background-color: #555;
+        background-color: var(--gray-marble);
+        color: var(--wine-red); /* Wine red hover color */
+        font-weight: 700;
     }
 
     main {
@@ -62,30 +94,52 @@
         margin-left: 80px;
         padding-top: 10px; /* Add some top padding for visual alignment */
         margin-bottom: 0%;
+        color: var(--brown-dark); /* Dark brown heading */
     }
+
+    main h2 {
+        font-family: 'Monserrat', sans-serif;
+        font-weight: 600;
+        color: var(--brown-dark); /* Dark brown subheading */
+        background-color: var(--beige-medium); /* Medium beige background for headings */
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+  }
 
     .container {
         display: flex; /* Maintain horizontal layout for large screens */
         gap: 20px;
         max-width: 1200px; /* Maximum width of the main container */
         margin: 0 auto; /* Center the container on large screens */
+        width: 100%;
     }
 
      .course-work-section {
         flex: 2; /* Larger */
-        background-color: white;
+        background-color: var(--beige-medium);
+        color: var(--wine-red);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        
+    }
+
+    .course-work-section h2 {
+        background-color: var(--beige-light);
+        color: var(--wine-red);
+        padding: 10px;
     }
 
      .caracas-section {
         flex: 1;
-        background-color: white;
+        background-color: var(--beige-medium);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
+        width: 100%;
     }
 
      .caracas-section img {
@@ -95,26 +149,37 @@
         border-radius: 5px;
     }
 
+    .caracas-section h2 {
+        background-color: var(--beige-light);
+        color: var(--wine-red);
+        padding: 10px;
+    }
+
 
     .certificate-section {
-        background-color: #ddd;
+        background-color: var(--beige-medium); /* Medium beige section background */
         padding: 20px;
         margin-top: 20px; /* Add some space above the certificate section */
         border-radius: 8px;
         text-align: center;
-        max-width: 960px; /* Maximum width for the certificate section */
+        max-width: 1160px; /* Maximum width for the certificate section */
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
 
     .certificate-section h2 {
         margin-top: 0; /* Remove default top margin for section title */
         margin-bottom: 15px;
+        color: var(--wine-red); /* Wine red section heading */
+        background-color: var(--beige-light); /* Light beige background for section heading */
+        padding: 10px;
     }
 
 
     .certificate-buttons {
         margin-bottom: 20px;
+        
     }
 
     .certificate-buttons button {
@@ -122,33 +187,38 @@
         margin: 0 10px;
         border: none;
         border-radius: 5px;
-        background-color: #5cb85c;
-        color: white;
+        background-color: var(--wine-red); /* Wine red button background */
+        color: var(--beige-light); /* Light beige button text */
         cursor: pointer;
+        width: 20%;
     }
 
     .certificate-buttons button:hover {
-        background-color: #4cae4c;
+         background-color: var(--gray-marble); /* Existing hover color */
+         color: var(--brown-dark);
+         font-weight: 700;
     }
 
     .courses-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
         gap: 10px;
+        color: var(--brown-dark);
     }
 
     .course-box {
-        background-color: #f9f9f9;
+        background-color: var(--green-olive);
         padding: 15px;
         border-radius: 5px;
         text-align: center;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         font-size: 1em; /* Normal text size */
+        color: var(--beige-light); /* Dark brown course box text */
     }
 
     footer {
-        background-color: #333;
-        color: white;
+        background-color: var(--brown-dark); /* Dark brown footer background */
+        color: var(--beige-light); /* Light beige footer text */
         text-align: center;
         padding: 10px;
         bottom: 0;
@@ -165,5 +235,3 @@
         background: linear-gradient(to right, #fdd200 33%, #008c45 33%, #008c45 66%, #c8102e 66%);
         border: 1px solid #ccc;
     }
-
-}

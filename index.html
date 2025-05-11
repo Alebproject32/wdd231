@@ -15,6 +15,12 @@
       media="(min-width: 320px)"
     />
     <link rel="stylesheet" href="styles/small.css" media="(max-width: 768px)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="navigation.js" defer></script>
 
     <script src="date.js" defer></script>
@@ -28,7 +34,13 @@
       <div style="clear: both"></div>
     </header>
 
-    <nav>
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav class="nav-menu">
       <a href="http://127.0.0.1:5500/wdd231/index.html">Home</a>
       <a href="#">Chamber</a>
       <a href="#">Final</a>
@@ -95,6 +107,13 @@
         const lastModifiedParagraph = document.getElementById("lastModified");
         const lastModifiedDate = new Date(document.lastModified);
         lastModifiedParagraph.textContent = `Last Update: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
+      });
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
       });
 
       function updateDateTime() {
