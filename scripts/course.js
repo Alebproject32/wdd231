@@ -77,36 +77,101 @@ const courses = [
         completed: false
     }
 ];
-document.addEventListener('DOMContentLoaded', function() {
-  const coursesContainer = document.getElementById('courses-container');
-  const allBtn = document.getElementById('all-btn');
+document.addEventListener("DOMContentLoaded", function() {
+  const coursesContainer = document.getElementById("courses-container");
+  const allBtn = document.getElementById("all-btn");
+  const cseBtn = document.getElementById("cse-btn");
+  const wddBtn = document.getElementById("wdd-btn");
+  const creditCount = document.getElementById("credit-count");
 
+  function displayCourses(courseList, bgColorCompleted, textColorCompleted, bgColorNotCompleted, textColorNotCompleted, showOnlySubject = null) {
+    coursesContainer.innerHTML = ""; // Clear previous courses
 
-  function displayCourses(courseList) {
-   coursesContainer.innerHTML = ''; // Clear previous courses
-   
-   courseList.forEach(course => {
-    const courseDiv = document.createElement('div');
-    courseDiv.classList.add('course-box');
-    courseDiv.textContent = `${course.subject} ${course.number} - ${course.title}`;
+    courseList.forEach(course => {
+      if (showOnlySubject && course.subject !== showOnlySubject) return; // Filter specific subject
 
-    if (course.completed) {
-     courseDiv.style.backgroundColor = "var(--gray-marble)";
-     courseDiv.style.color = "var(--brown-dark)";
-     courseDiv.innerHTML += ' &#10004;'; // Add checkmark symbol
-    } 
+      const courseDiv = document.createElement("div");
+      courseDiv.classList.add("course-box");
+      courseDiv.textContent = `${course.subject} ${course.number} - ${course.title}`;
 
-    coursesContainer.appendChild(courseDiv);
-   });
+      if (course.completed) {
+        courseDiv.style.backgroundColor = bgColorCompleted;
+        courseDiv.style.color = textColorCompleted;
+        courseDiv.innerHTML += " ✅"; // Add checklist symbol
+      } else {
+        courseDiv.style.backgroundColor = bgColorNotCompleted;
+        courseDiv.style.color = textColorNotCompleted;
+      }
+
+      coursesContainer.appendChild(courseDiv);
+    });
+
+    // Calculate total credits dynamically using reduce()
+    const totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
+    creditCount.textContent = totalCredits; // Update the credit count display
   }
 
-  
+  // Event for "ALL" button
+  allBtn.addEventListener("click", () => {
+    displayCourses(
+      courses,
+      "var(--gray-marble)", "var(--brown-dark)", // Colors for completed courses
+      "var(--wine-red)", "var(--beige-light)"   // Colors for incomplete courses
+    );
 
-  allBtn.addEventListener('click', () => {
-    const completedCourses = courses.filter(course => course.completed);
-    displayCourses(completedCourses);
+    // Highlight the active button
+    allBtn.style.backgroundColor = "var(--gray-marble)";
+    allBtn.style.color = "var(--brown-dark)";
+    cseBtn.style.backgroundColor = "";
+    cseBtn.style.color = "";
+    wddBtn.style.backgroundColor = "";
+    wddBtn.style.color = "";
   });
-  
-  displayCourses(courses);
+
+  // Event for "CSE" button
+  cseBtn.addEventListener("click", () => {
+    const cseCourses = courses.filter(course => course.subject === "CSE");
+
+    displayCourses(
+      cseCourses, 
+      "var(--golden-ocre)", "black", // Colors for completed CSE courses
+      "", "", // Incomplete courses should not appear
+      "CSE"
+    );
+
+    // Highlight the active button
+    cseBtn.style.backgroundColor = "var(--golden-ocre)";
+    cseBtn.style.color = "black";
+    allBtn.style.backgroundColor = "";
+    allBtn.style.color = "";
+    wddBtn.style.backgroundColor = "";
+    wddBtn.style.color = "";
+  });
+
+  // Event for "WDD" button
+  wddBtn.addEventListener("click", () => {
+    const wddCourses = courses.filter(course => course.subject === "WDD");
+
+    displayCourses(
+      wddCourses, 
+      "black", "var(--beige-light)", // Colors for completed WDD courses
+      "var(--wine-red)", "var(--beige-light)", // Colors for incomplete WDD courses
+      "WDD"
+    );
+
+    // Highlight the active button
+    wddBtn.style.backgroundColor = "black";
+    wddBtn.style.color = "var(--beige-light)";
+    allBtn.style.backgroundColor = "";
+    allBtn.style.color = "";
+    cseBtn.style.backgroundColor = "";
+    cseBtn.style.color = "";
+  });
+
+  // Initially display all completed courses
+  displayCourses(
+    courses.filter(course => course.completed),
+    "var(--gray-marble)", "var(--brown-dark)", 
+    "var(--wine-red)", "var(--beige-light)"
+  );
 });
-  
