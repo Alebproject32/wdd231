@@ -21,11 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="navigation.js" defer></script>
-
-    <script src="date.js" defer></script>
-
-    <script src="course.js" defer></script>
+    <script defer src="scripts/navegation.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/course.js"></script>
   </head>
   <body>
     <header>
@@ -73,11 +71,11 @@
       <section class="certificate-section">
         <h2>Web and Computer Programming Certificate</h2>
         <div class="certificate-buttons">
-          <button>All</button>
-          <button>CSE</button>
-          <button>WDD</button>
+          <button id="all-btn">All</button>
+          <button id="cse-btn">CSE</button>
+          <button id="wdd-btn">WDD</button>
         </div>
-        <div class="courses-grid">
+        <div class="courses-grid" id="courses-container">
           <div class="course-box">CSE 111</div>
           <div class="course-box">WDD 130</div>
           <div class="course-box">CSE 110</div>
@@ -95,42 +93,5 @@
       </p>
       <p id="lastModified"></p>
     </footer>
-
-    <script>
-      // JavaScript recently year
-      document.addEventListener("DOMContentLoaded", function () {
-        const currentYearSpan = document.getElementById("currentyear");
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-
-        // JavaScript last modified date
-        const lastModifiedParagraph = document.getElementById("lastModified");
-        const lastModifiedDate = new Date(document.lastModified);
-        lastModifiedParagraph.textContent = `Last Update: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
-      });
-
-      const hamburger = document.querySelector(".hamburger-menu");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      function updateDateTime() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = (now.getMonth() + 1).toString().padStart(2, "0");
-        const day = now.getDate().toString().padStart(2, "0");
-        const hours = now.getHours().toString().padStart(2, "0");
-        const minutes = now.getMinutes().toString().padStart(2, "0");
-        const seconds = now.getSeconds().toString().padStart(2, "0");
-        document.getElementById(
-          "datetime"
-        ).textContent = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-      }
-
-      updateDateTime();
-      setInterval(updateDateTime, 1000);
-    </script>
   </body>
 </html>

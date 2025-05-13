@@ -8,6 +8,8 @@
     --wine-red: #800020; /* Wine red */
     --gray-marble: #b9b4b1; /* Gray marble */
     --green-olive: #6B8E23; /* Green Olive */
+    --golden-ocre: #CC7722; /* Golden Ocre */
+    --brown-ocre: #4A2910; /* Brown Ovre */
   }
 
     body {
@@ -214,6 +216,34 @@
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         font-size: 1em; /* Normal text size */
         color: var(--beige-light); /* Dark brown course box text */
+        margin-bottom: 10px; /* Add some spacing between courses */
+    }
+
+    .course-box.completed {
+        background-color: var(--green-olive);
+        color: var(--beige-light);
+    }
+
+    .course-box.not-completed {
+        background-color: var(--wine-red); /* Using firebrick for wine red */
+        color: var(--beige-light);
+    }
+
+    .certificate-buttons button.active {
+        /* Style for the active button */
+        background-color: var(--brown-dark); /* Example active button color */
+        color: var(--beige-light);
+    }
+
+    /* Styles for CSE courses after "CSE" button click */
+        .courses-container.completed:where :has-text(/CSE/) {
+         background-color: var(--gray-marble); /* Marble gray */
+    }
+
+    /* Styles for WDD courses after "WDD" button click */
+        .courses-container.completed:where.completed:where :has-text(/WDD/) {
+         background-color: var(--golden-ocre); /* Golden ochre */
+         color: var(--beige-light); /* Ensure text is readable on goldenrod */
     }
 
     footer {
@@ -225,6 +255,12 @@
         width: 100%;
         font-size: 0.8em;
         margin-top: 20px; /* Add some space above the footer */
+    }
+
+
+    footer p a {
+        color: var(--beige-light);
+        text-decoration: none;
     }
 
     .flag {
