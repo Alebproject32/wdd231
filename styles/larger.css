@@ -3,6 +3,7 @@
     :root {
     --beige-light: #F5F5DC; /* Light beige */
     --beige-medium: #E0CBA8; /* Medium beige */
+    --beige-dark: #AC9362; /* Dark Beige */
     --brown-light: #A0522D; /* Light brown */
     --brown-dark: #654321; /* Dark brown */
     --wine-red: #800020; /* Wine red */
@@ -120,7 +121,7 @@
 
      .course-work-section {
         flex: 2; /* Larger */
-        background-color: var(--beige-medium);
+        background-color: var(--beige-dark);
         color: var(--wine-red);
         padding: 20px;
         border-radius: 8px;
@@ -137,7 +138,7 @@
 
      .caracas-section {
         flex: 1;
-        background-color: var(--beige-medium);
+        background-color: var(--beige-dark);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -160,7 +161,7 @@
 
 
     .certificate-section {
-        background-color: var(--beige-medium); /* Medium beige section background */
+        background-color: var(--beige-dark); /* Medium beige section background */
         padding: 20px;
         margin-top: 20px; /* Add some space above the certificate section */
         border-radius: 8px;
@@ -179,8 +180,10 @@
         padding: 10px;
     }
 
-    .credit-count {
+    .certificate-section p {
         color: var(--black);
+        font-style: italic;
+        font-weight: 600;
     }
 
     .certificate-buttons {
@@ -239,16 +242,6 @@
         color: var(--beige-light);
     }
 
-    /* Styles for CSE courses after "CSE" button click */
-        .courses-container.completed:where :has-text(/CSE/) {
-         background-color: var(--gray-marble); /* Marble gray */
-    }
-
-    /* Styles for WDD courses after "WDD" button click */
-        .courses-container.completed:where.completed:where :has-text(/WDD/) {
-         background-color: var(--golden-ocre); /* Golden ochre */
-         color: var(--beige-light); /* Ensure text is readable on goldenrod */
-    }
 
     footer {
         background-color: var(--brown-dark); /* Dark brown footer background */
