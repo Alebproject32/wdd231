@@ -179,6 +179,9 @@
         padding: 10px;
     }
 
+    .credit-count {
+        color: var(--black);
+    }
 
     .certificate-buttons {
         margin-bottom: 20px;

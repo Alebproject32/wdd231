@@ -115,13 +115,13 @@ document.addEventListener("DOMContentLoaded", function() {
   allBtn.addEventListener("click", () => {
     displayCourses(
       courses,
-      "var(--gray-marble)", "var(--brown-dark)", // Colors for completed courses
+      "var(--brown-dark)", "var(--beige-light)", // Colors for completed courses
       "var(--wine-red)", "var(--beige-light)"   // Colors for incomplete courses
     );
 
     // Highlight the active button
-    allBtn.style.backgroundColor = "var(--gray-marble)";
-    allBtn.style.color = "var(--brown-dark)";
+    allBtn.style.backgroundColor = "var(--brown-dark)";
+    allBtn.style.color = "var(--beige-light)";
     cseBtn.style.backgroundColor = "";
     cseBtn.style.color = "";
     wddBtn.style.backgroundColor = "";
