@@ -63,7 +63,6 @@
     }
 
     nav ul {
-        list-style-type: none; /* Remove bullet points from the list */
         padding: 0; /* Remove default padding for the list */
         margin: 0; /* Remove default margin for the list */
         display: flex; /* Enable Flexbox for the list items (links) */
