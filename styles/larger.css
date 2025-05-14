@@ -16,7 +16,6 @@
 
     body {
         font-family: "Barlow", sans-serif;
-        font-weight: 400px;
         margin: 0;
         padding: 0;
         background-color: var(--beige-light); /* Light beige background */
@@ -26,7 +25,6 @@
 
     header {
         background-color: var(--beige-medium); /* Medium beige section background */
-        font-size: 300px;
         color: white;
         padding: 20px;
         display: flex; /* Enable flexbox for header content alignment */

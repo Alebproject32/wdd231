@@ -21,7 +21,6 @@
 
     header {
         background-color: var(--beige-medium); /* Medium beige section background */
-        font-size: 300px;
         color: var(--wine-red);
         padding: 15px;
         text-align: center;
