@@ -21,8 +21,7 @@
 
     header {
         background-color: var(--beige-medium); /* Medium beige section background */
-        font-size: 300;
-        font-style: italic;
+        font-size: 300px;
         color: var(--wine-red);
         padding: 15px;
         text-align: center;
@@ -46,8 +45,7 @@
         font-size: 1.2em; /* Adjust font size for small screens */
         color: var(--wine-red); /* Wine red name */   
         font-family: "Barlow", sans-serif;
-        font-style: italic;
-        font-weight: 600;
+        font-weight: 600px;
         margin-left: 0;
 
     }
