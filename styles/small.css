@@ -44,7 +44,7 @@
         font-size: 1.2em; /* Adjust font size for small screens */
         color: var(--wine-red); /* Wine red name */   
         font-family: "Barlow", sans-serif;
-        font-weight: 600px;
+        font-weight: 600;
         margin-left: 0;
 
     }

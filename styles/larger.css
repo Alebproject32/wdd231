@@ -49,7 +49,7 @@
         font-size: 2.9em; /* Adjust font size for larger screens */
         color: var(--wine-red); /* Wine red name */   
         font-family: "Barlow", sans-serif;
-        font-weight: 600px;
+        font-weight: 600;
         margin-left: 0;
     }
 
@@ -99,7 +99,7 @@
 
     main h2 {
         font-family: 'Monserrat', sans-serif;
-        font-weight: 600px;
+        font-weight: 600;
         color: var(--brown-dark); /* Dark brown subheading */
         background-color: var(--beige-medium); /* Medium beige background for headings */
         padding: 10px;
@@ -178,7 +178,7 @@
 
     .certificate-section p {
         color: var(--black);
-        font-weight: 600px;
+        font-weight: 600;
     }
 
     .certificate-buttons {
@@ -200,7 +200,7 @@
     .certificate-buttons button:hover {
          background-color: var(--gray-marble); /* Existing hover color */
          color: var(--brown-dark);
-         font-weight: 700px;
+         font-weight: 700;
     }
 
     .courses-grid {
