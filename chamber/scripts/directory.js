@@ -32,6 +32,13 @@ function displayMembers(members) {
         let name = document.createElement('h3');
         name.textContent = member.name;
 
+        let image = document.createElement('img');
+        image.src = `images/${member.image}`;
+        image.alt = `Logo of ${member.name}`;
+        image.loading = 'lazy';
+        image.width = 150; // Adjust as needed
+        image.height = 100; // Adjust as needed
+
         let address = document.createElement('p');
         address.textContent = member.address;
 
@@ -44,13 +51,6 @@ function displayMembers(members) {
         websiteLink.textContent = member.website; // Display the full URL
         websiteLink.target = '_blank';
         website.appendChild(websiteLink);
-
-        let image = document.createElement('img');
-        image.src = `images/${member.image}`;
-        image.alt = `Logo of ${member.name}`;
-        image.loading = 'lazy';
-        image.width = 150; // Adjust as needed
-        image.height = 100; // Adjust as needed
 
         let membership = document.createElement('p');
         let membershipText = '';
@@ -97,6 +97,16 @@ function displayList(members) {
         let name = document.createElement('h3');
         name.textContent = member.name;
 
+        let image = document.createElement('img');
+        image.src = `images/${member.image}`;
+        image.alt = `Logo of ${member.name}`;
+        image.loading = 'lazy';
+        image.width = 80; // Adjust as needed for list view
+        image.height = 50; // Adjust as needed for list view
+
+        let details = document.createElement('div'); // Container for other details
+        details.classList.add('member-details');
+
         let address = document.createElement('p');
         address.textContent = `Address: ${member.address}`;
 
@@ -127,11 +137,13 @@ function displayList(members) {
         }
         membership.textContent = membershipText;
 
-        listItem.appendChild(name);
-        listItem.appendChild(address);
-        listItem.appendChild(phone);
-        listItem.appendChild(website);
-        listItem.appendChild(membership);
+        listItem.appendChild(image); // Add the image to the list item
+        details.appendChild(name);
+        details.appendChild(address);
+        details.appendChild(phone);
+        details.appendChild(website);
+        details.appendChild(membership);
+        listItem.appendChild(details); // Add the details container
 
         memberListDiv.appendChild(listItem);
     });
