@@ -1,0 +1,65 @@
+[
+  {
+    "name": "ElectroTech Solutions",
+    "address": "Av. Libertador, Edificio Principal, Local 12, Caracas",
+    "phone": "(0212) 555-1234",
+    "website": "https://www.etsingenieria.com.co/",
+    "image": "Electrotech_solution.png",
+    "membershipLevel": 3,
+    "description": "Leader in technological solutions and electronic equipment."
+  },
+  {
+    "name": "Sabores Criollos Restaurant",
+    "address": "Calle Bolívar, No. 45, La Candelaria, Caracas",
+    "phone": "(0212) 444-5678",
+    "website": "https://www.restaurantesaborcriollo.com/menu/",
+    "image": "Sabor_criollo_restaurante.jpeg",
+    "membershipLevel": 1,
+    "description": "Authentic Venezuelan cuisine with traditional flavor."
+  },
+  {
+    "name": "Inversiones Global Finance",
+    "address": "Torre Financiera, Piso 10, Oficina A, Caracas",
+    "phone": "(0212) 777-9012",
+    "website": "https://gbm.com/",
+    "image": "Global_finance.jpeg",
+    "membershipLevel": 2,
+    "description": "Financial advisory and investment management globally."
+  },
+  {
+    "name": "Moda Bella Boutiques",
+    "address": "Phoenix, AZ, US",
+    "phone": "(1) 999-3456-5387",
+    "website": "https://www.modabellaboutiques.com/location",
+    "image": "Moda_bella_boutique.jpeg",
+    "membershipLevel": 1,
+    "description": "The latest trends in women's fashion."
+  },
+  {
+    "name": "Integral service Engineer",
+    "address": "Collins Street West Victoria 8007 Australia",
+    "phone": "(+23) 345 322 233",
+    "website": "https://serviciosing.net/",
+    "image": "Ing_solution.png",
+    "membershipLevel": 3,
+    "description": "Comprehensive solutions in civil and mechanical engineering."
+  },
+  {
+    "name": "Mapfre Venezuela",
+    "address": "Avenida Principal de La Castellana, Torre Mapfre, Caracas",
+    "phone": "(0212) 207-7000",
+    "website": "https://www.mapfre.com.ve/",
+    "image": "mapfre.png",
+    "membershipLevel": 2,
+    "description": "Leading insurance company offering a wide range of coverage."
+  },
+  {
+    "name": "Logística Express Venezuela",
+    "address": "Zona Industrial La Trinidad, Calle 7, Galpón 5, Caracas",
+    "phone": "(0212) 333-4567",
+    "website": "https://logisticaexpress.com.ve",
+    "image": "lev.jpeg",
+    "membershipLevel": 1,
+    "description": "Logistics and freight transport services nationwide."
+  }
+]

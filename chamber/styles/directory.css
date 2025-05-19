@@ -1,0 +1,364 @@
+/* styles.css */
+
+/* General Styles */
+@media (min-width: 769px) { /* Apply these styles for larger screens */
+    :root {
+        --weathered-bronze: #B8860B; /* Weathered Bronze */
+        --cobalt-blue: #00008B; /* Cobalt Blue for links */
+        --black: #000000; /* Black as default text color */
+    }
+    
+    body {
+        font-family: sans-serif; /* Choose your planned font family */
+        background-color: #B8860B; /* Weathered Bronze */
+        color: #000000; /* Black as default text color */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    a {
+        color: #00008B; /* Cobalt Blue for links */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+    /* Header */
+    header {
+        background-color: #FAF0E6; /* Marfil */
+        color: #000000; /* Black header text */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2vw;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 100px; /* Adjust as needed */
+        height: auto;
+        margin-right: 1rem;
+    }
+
+    /* Navigation */
+    .main-nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navigation {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .navigation li {
+        margin-left: 1.5rem;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    #menuBtn {
+        display: none; /* Hide by default for larger screens */
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #menuBtn.open::before {
+        content: 'X'; /* Change to 'X' when open */
+    }
+
+    /* Main Content */
+    main {
+        padding: 2rem 2vw;
+        flex-grow: 1;
+    }
+
+    .hero {
+    position: relative; /* Important: Makes the hero container the positioning context */
+    margin-bottom: 2rem;
+    overflow: hidden; /* Optional: To contain any potential button overflow */
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* Adjust as needed */
+        object-fit: cover; /* Prevent distortion */
+    }
+
+    .keynote-button {
+        position: absolute; /* Positions the button relative to the nearest positioned ancestor (.hero) */
+        bottom: 1rem;      /* Adjust this value to control the distance from the bottom */
+        right: 1rem;       /* Adjust this value to control the distance from the right */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        z-index: 10;       /* Ensure the button is above the image if there's any overlap */
+    }
+    .home-grid {
+        display: flex; /* Cambiamos a flex para disposición horizontal */
+        gap: 1rem;      /* Espacio entre los recuadros */
+        margin-top: 1rem;
+        flex-wrap: wrap; /* Permite que los recuadros pasen a la siguiente línea en pantallas pequeñas */
+    }
+
+    .home-grid > div {
+        background-color: #f9f9f9; /* Color de fondo general de los recuadros */
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        flex: 1;         /* Hace que los recuadros se expandan para ocupar el espacio disponible */
+        min-width: 250px; /* Ancho mínimo de cada recuadro para evitar que se compriman demasiado */
+    }
+
+    .home-grid > div h2 {
+        background-color: #FAF0E6; /* Marfil - el color de fondo del header */
+        color: #000000;           /* Color del texto del h2 */
+        padding: 0.5rem;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 1rem; /* Espacio entre el h2 y el contenido */
+        display: inline-block; /* Para que el fondo solo ocupe el ancho del texto */
+    }
+
+    .home-grid h2 {
+        overflow: hidden;
+    }
+.home-grid .events h2 {
+    margin-top: -1rem; /* Ajusta este valor según sea necesario para superponer el encabezado */
+    padding-top: 0.5rem; /* Compensar el margen negativo con un poco de padding superior */
+    background-color: #FAF0E6; /* Asegúrate de que el fondo tape el borde superior del recuadro */
+    color: #000000;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative; /* Necesario para controlar el z-index si es necesario */
+    z-index: 1;       /* Asegura que el h2 esté encima del fondo del div */
+}
+
+
+    main h2 {
+        color: #00008B; /* Cobalt Blue for main headings */
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .directory-view {
+    margin-top: 2rem;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.view-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.view-buttons button.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.member-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.member-card p a {
+    overflow-wrap: break-word; /* If a line is too long, break it where needed */
+    word-break: break-all;    /* Force line breaks even if the word doesn't naturally break */
+    display: block;           /* Ensure the link takes up the full width available in the <p> */
+}
+
+.member-list-item p a {
+    overflow-wrap: break-word;
+    word-break: break-all;
+    display: block;
+}
+
+.member-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #00008B; /* Cobalt Blue */
+}
+
+.member-list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.member-list-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-list-item h3 {
+    margin-top: 0;
+    color: #00008B; /* Cobalt Blue */
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+    /* Footer */
+    footer {
+        background-color: #FAF0E6; /* Marfil footer */
+        color: #000000; /* Black footer text */
+        padding: 1rem 2vw;
+        text-align: center;
+    }
+
+    .social {
+        margin-top: 0.5rem;
+    }
+
+    .social img {
+        max-width: 50px; /* Adjust as needed */
+        height: auto;
+        margin: 0 0.5rem;
+        border-radius: 5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .main-nav {
+            justify-content: flex-start;
+        }
+
+        .navigation {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #FAF0E6;
+            position: absolute;
+            top: 60px; /* Adjust based on header height */
+            left: 0;
+            z-index: 10;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .navigation.open {
+            display: flex;
+        }
+
+        .navigation li {
+            margin-left: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navigation li a {
+            padding: 0.75rem 2vw;
+        }
+
+        #menuBtn {
+            display: block;
+        }
+
+        .logo h1 {
+            font-size: 1.2rem; /* Adjust logo text size for smaller screens */
+        }
+
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .main-nav {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+         .home-grid {
+        flex-direction: column; /* Volvemos a columna en pantallas pequeñas */
+        }
+
+        .home-grid > div {
+            flex: 0 0 auto; /* Evita la expansión en columna */
+            width: 100%;    /* Ocupa todo el ancho */
+            min-width: auto;
+        }
+    }
+
+    }
+
+    @media (min-width: 769px) {
+        .home-grid {
+        flex-direction: row; /* Mantenemos la disposición horizontal en pantallas grandes */
+        flex-wrap: nowrap; /* Evitamos el salto de línea en pantallas grandes si no hay suficiente espacio */
+        }
+
+        .home-grid > div {
+            flex: 1; /* Los elementos se distribuyen equitativamente */
+            min-width: 0; /* Permite que se encojan si es necesario */
+        }
+        .directory-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
+        }
+        #menuBtn {
+            display: none !important; /* Ensure it's hidden on larger screens */
+        }
+        .navigation {
+            display: flex !important; /* Ensure it's visible on larger screens */
+        }
+        
+    }
