@@ -296,7 +296,7 @@
     }
     
     .footer-social a:nth-child(3) img {
-        background-image: url('images/linkedIn-botton.avif');
+        background-image: url('images/linkedin-botton.avif');
         background-size: cover; /* Ensure the image covers the background */
         background-repeat: no-repeat;
         background-color: #0077b5; /* LinkedIn blue */
