@@ -54,12 +54,12 @@
         max-width: 100px; /* Adjust as needed */
         height: auto;
         margin-right: 1rem;
-        order: 1;
+        order: 0;
     }
 
     .logo h1 {
-    order: 0; 
-    margin: 0;
+        order: 1; 
+        margin: 0;
     }
 
     /* Navigation for Larger Screens */
