@@ -289,20 +289,23 @@
     }
 
     .footer-social a:nth-child(1) img {
-        -webkit-mask-image: url('images/youtube_icon.png');
-        mask-image: url('images/youtube_icon.png');
+        background-image: url('images/youtube_boton.webp');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
         background-color: #c4302b; /* YouTube red */
     }
 
     .footer-social a:nth-child(2) img {
-        -webkit-mask-image: url('images/twitter_icon.png');
-        mask-image: url('images/twitter_icon.png');
+        background-image: url('images/twitter_botton.avif');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
         background-color: #1da1f2; /* Twitter blue */
     }
 
     .footer-social a:nth-child(3) img {
-        -webkit-mask-image: url('images/linkedin_icon.png');
-        mask-image: url('images/linkedin_icon.png');
+        background-image: url('images/linkedIn-botton.avif');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
         background-color: #0077b5; /* LinkedIn blue */
     }
 }
