@@ -55,7 +55,9 @@
         max-width: 100px; /* Adjust as needed */
         height: auto;
         margin-right: 1rem;
+        order: 1;
     }
+
 
     .logo h1 {
         font-size: 1.2rem; /* Adjust logo text size for smaller screens */
