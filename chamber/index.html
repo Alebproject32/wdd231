@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamber Home Page</title>
+    <meta
+      name="description"
+      content="WDD 231 - Web Frontend Development I - Alejandro Isaac Pérez Brito, I am designing a new website called 'Chamber Home Page' that is tied a main website project has been a requirement to get my certificate in Web and Computer Programming from BYU-Idaho."
+    />
+    <meta name="author" content="Alejandro I. Pérez B." />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/small_directory.css" />
+    <link rel="stylesheet" href="styles/larger_directory.css" />
+    <link rel="scripts" href="scripts/directory.js" />
+
+    <meta property="og:title" content="Caracas Chamber Directory Page" />
+    <meta
+      property="og:description"
+      content="Explore the directory of businesses in the Timbuktu Chamber of Commerce. Find local businesses and connect with the community."
+    />
+    <meta
+      property="og:image"
+      content="https://www.Alebproject32.github.io/wdd231/chamber/images/chamber_commerce_1.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.Alebproject32.github.io/wdd231/directory.html"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Caracas Chamber Home Page</h1>
+        <img
+          src="images/chamber-commercer_2.jpeg"
+          alt="Caracas Chamber of Commerce Logo"
+        />
+      </div>
+      <nav class="main-nav">
+        <button id="menuBtn">☰</button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <img
+          src="images/chamber_commerce_1.jpg"
+          alt="Scalable Responsive Hero Image"
+          height="300"
+        />
+        <button class="call-to-action">Call to Action</button>
+      </div>
+
+      <section class="home-grid">
+        <h2>Home</h2>
+        <div class="events">
+          <h2>Events</h2>
+        </div>
+        <div class="weather">
+          <h2>Current Weather</h2>
+        </div>
+        <div class="forecast">
+          <h2>Weather Forecast</h2>
+        </div>
+      </section>
+      <section class="directory-view">
+        <div class="view-buttons">
+          <button id="gridBtn" class="active">Grid</button>
+          <button id="listBtn">List</button>
+        </div>
+        <div id="memberList" class="directory-grid"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <p>Caracas Chamber of Commerce</p>
+        <p>10 Rue De La Paix</p>
+        <p>Capital District, main avenue 1090</p>
+        <p>
+          <a href="mailto:caracaschamber360@commerce.org"
+            >caracaschamber360@commerce.org</a
+          >
+        </p>
+        <p>(+58) 0212-678-592300</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" target="_blank"
+          ><img src="images/youtube_boton.webp" alt="YouTube"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="images/twitter-botton.avif" alt="Twitter"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="images/linkedin-botton.avif" alt="LinkedIn"
+        /></a>
+      </div>
+      <div class="footer-meta">
+        <p>WDD231 Class Project</p>
+        <p>Alejandro I. Pérez B.</p>
+        <p>&copy; <span id="year"></span> Caracas Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </footer>
+    <script src="scripts/directory.js"></script>
+    <script>
+      document.getElementById("lastModified").textContent =
+        document.lastModified;
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const menuBtn = document.getElementById("menuBtn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+        menuBtn.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
