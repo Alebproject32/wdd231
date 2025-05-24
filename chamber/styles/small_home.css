@@ -39,10 +39,17 @@
     header {
         background-color: var(--white); /* Marfil */
         color: var(--black); /* Black header text */
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 1rem 2vw;
+    }
+
+    .main-heading {
+        left: 120px; 
+        font-size: 1.5rem; 
+        max-width: calc(100% - 130px);
     }
 
     .logo {
