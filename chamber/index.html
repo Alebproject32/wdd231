@@ -10,9 +10,8 @@
     />
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/small_directory.css" />
-    <link rel="stylesheet" href="styles/larger_directory.css" />
-    <link rel="scripts" href="scripts/directory.js" />
+    <link rel="stylesheet" href="styles/small_home.css" />
+    <link rel="stylesheet" href="styles/larger_home.css" />
 
     <meta property="og:title" content="Caracas Chamber Directory Page" />
     <meta
@@ -50,26 +49,38 @@
     <main>
       <div class="hero">
         <img
-          src="images/chamber_commerce_1.jpg"
+          src="images/chamber_commerce_4.webp"
           alt="Scalable Responsive Hero Image"
           height="300"
         />
         <button class="call-to-action">Call to Action</button>
       </div>
 
+      <h2>Home</h2>
       <section class="home-grid">
-        <h2>Home</h2>
         <div class="events">
           <h2>Events</h2>
+          <p>
+            Tomorrow we will start with several courses and advises to improve
+            your businesses project.
+          </p>
         </div>
         <div class="weather">
           <h2>Current Weather</h2>
+          <div id="current-weather"></div>
         </div>
         <div class="forecast">
           <h2>Weather Forecast</h2>
+          <div id="weather-forecast"></div>
         </div>
       </section>
-      <section class="directory-view">
+
+      <section class="spotlights">
+        <h2>Member Spotlights</h2>
+        <div id="spotlight-container" class="directory-grid"></div>
+      </section>
+
+      <section class="directory-view" style="display: none">
         <div class="view-buttons">
           <button id="gridBtn" class="active">Grid</button>
           <button id="listBtn">List</button>
@@ -90,14 +101,14 @@
         <p>(+58) 0212-678-592300</p>
       </div>
       <div class="footer-social">
-        <a href="#" target="_blank"
-          ><img src="images/youtube_boton.webp" alt="YouTube"
+        <a href="https://www.youtube.com/" target="_blank"
+          ><img src="images/youtube_botton.webp" alt="YouTube"
         /></a>
-        <a href="#" target="_blank"
-          ><img src="images/twitter-botton.avif" alt="Twitter"
+        <a href="https://www.twitter.com/" target="_blank"
+          ><img src="images/twitter_botton.avif" alt="Twitter"
         /></a>
-        <a href="#" target="_blank"
-          ><img src="images/linkedin-botton.avif" alt="LinkedIn"
+        <a href="https://www.linkedIn.com/" target="_blank"
+          ><img src="images/linkedin_botton.avif" alt="LinkedIn"
         /></a>
       </div>
       <div class="footer-meta">
@@ -107,7 +118,8 @@
         <p>Last Modification: <span id="lastModified"></span></p>
       </div>
     </footer>
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
     <script>
       document.getElementById("lastModified").textContent =
         document.lastModified;

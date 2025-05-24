@@ -1,0 +1,315 @@
+@media (max-width: 768px) {
+    /* General Styles for Small Screens */
+    :root {
+        --weathered-bronze: #B8860B; /* Weathered Bronze */
+        --cobalt-blue: #00008B; /* Cobalt Blue for links */
+        --black: #000000; /* Black as default text color */
+        --white: #fffff0; /* White */
+        --smoke-white: #f9f9f9; /* Smoke white */
+        --light-brown: #faf0e6; /* Light Brown */
+        --light-gray: #ddd; /* Light Gray */
+        --light-gray-2: #ccc; /* Light Gray 2 */
+        --gray: #808080; /* Gray */
+    }
+
+    body {
+        font-family: sans-serif; /* Choose your planned font family */
+        background-color: var(--weathered-bronze); /* Weathered Bronze */
+        color: var(--black); /* Black as default text color */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    a {
+        color: var(--cobalt-blue); /* Cobalt Blue for links */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+    /* Header for Small Screens */
+    header {
+        background-color: var(--white); /* Marfil */
+        color: var(--black); /* Black header text */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2vw;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem; /* Space between logo and nav on small screens */
+    }
+
+    .logo img {
+        max-width: 100px; /* Adjust as needed */
+        height: auto;
+        margin-right: 1rem;
+        order: 0;
+    }
+
+
+    .logo h1 {
+        font-size: 1.2rem; /* Adjust logo text size for smaller screens */
+        order: 0; 
+        margin: 0;
+    }
+
+    /* Navigation for Small Screens */
+    .main-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-brown);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--light-gray-2);
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation li {
+        margin-left: 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .navigation li a {
+        padding: 0.75rem 2vw;
+    }
+
+    #menuBtn {
+        display: block;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    #menuBtn.open::before {
+        content: 'X'; /* Change to 'X' when open */
+    }
+
+    /* Main Content for Small Screens */
+    main {
+        padding: 2rem 2vw;
+        flex-grow: 1;
+    }
+
+    .hero {
+        position: relative;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* Adjust as needed */
+        object-fit: cover;
+    }
+
+    .keynote-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: var(--light-gray);
+        color: var(--cobalt-blue);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        z-index: 10;
+    }
+
+    .home-grid {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .home-grid > div {
+        background-color: var(--smoke-white);
+        border-radius: 5px;
+        border: 1px solid var(--light-gray);
+        padding: 1.5rem;
+        flex: 0 0 auto; /* Prevent expansion in column layout */
+        width: 100%; /* Take full width */
+        min-width: auto;
+    }
+
+    .home-grid > div h2 {
+        background-color: var(--light-brown);
+        color: var(--black);
+        padding: 0.5rem;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .home-grid h2 {
+        overflow: hidden;
+    }
+
+    .home-grid .events h2 {
+        margin-top: -1rem;
+        padding-top: 0.5rem;
+        background-color: var(--light-brown);
+        color: var(--black);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 3px;
+        margin-bottom: 1rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+
+    main h2 {
+        color: var(--cobalt-blue); /* Cobalt Blue for main headings */
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .directory-view {
+        margin-top: 2rem;
+    }
+
+    .view-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .view-buttons button {
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--light-gray-2);
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--smoke-white);
+    }
+
+    .view-buttons button.active {
+        background-color: #e0e0e0;
+        font-weight: bold;
+    }
+
+    .member-card {
+        background-color: var(--white);
+        border: 1px solid var(--light-gray);
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .member-card p a {
+        overflow-wrap: break-word;
+        word-break: break-all;
+        display: block;
+    }
+
+    .member-list-item p a {
+        overflow-wrap: break-word;
+        word-break: break-all;
+        display: block;
+    }
+
+    .member-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: var(--cobalt-blue); /* Cobalt Blue */
+    }
+
+    .member-list-view {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .member-list-item {
+        background-color: var(--white);
+        border: 1px solid var(--light-gray);
+        border-radius:5px;
+    }
+
+    footer {
+    background-color: var(--light-brown); /* Marfil footer */
+    color: var(--black); /* Black footer text */
+    padding: 1rem 2vw;
+    display: flex;
+    flex-direction: column; /* Stack blocks on small screens */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each block */
+    }
+
+    .footer-info, .footer-social, .footer-meta {
+        margin-bottom: 1rem; /* Add spacing between blocks */
+    }
+
+    .footer-social a img {
+        width: 30px; /* Adjust icon size as needed */
+        height: 30px;
+        margin: 0 0.5rem;
+        border-radius: 5px;
+        background-color: var(--gray); /* Gray background for icons */
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        -webkit-mask-position: center;
+        mask-position: center;
+        display: inline-block; /* Prevent icons from stacking */
+    }
+
+    .footer-social a:nth-child(1) img {
+        background-image: url('../images/youtube_botton.webp');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
+        background-color: #c4302b; /* YouTube red */
+    }
+
+    .footer-social a:nth-child(2) img {
+        background-image: url('../images/twitter_botton.avif');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
+        background-color: #1da1f2; /* Twitter blue */
+    }
+
+    .footer-social a:nth-child(3) img {
+        background-image: url('../images/linkedin_botton.avif');
+        background-size: cover; /* Ensure the image covers the background */
+        background-repeat: no-repeat;
+        background-color: #0077b5; /* LinkedIn blue */
+    }
+}
