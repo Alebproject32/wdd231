@@ -126,13 +126,13 @@
 }
 
 .membership-card h3 {
-  color: #007bff;
+  color: black;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .membership-card p {
-  color: #666;
+  color: black;
   flex-grow: 1;
 }
 
@@ -140,7 +140,7 @@
   display: inline-block;
   margin-top: 15px;
   padding: 8px 15px;
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
   text-decoration: none;
   border-radius: 5px;
