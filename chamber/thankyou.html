@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You for Your Application - Caracas Chamber</title>
+    <meta
+      name="description"
+      content="Thank you for your membership application to the Caracas Chamber of Commerce."
+    />
+    <meta name="author" content="Alejandro I. Pérez B." />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/small_home.css" />
+    <link rel="stylesheet" href="styles/larger_home.css" />
+    <link rel="stylesheet" href="styles/thankyou.css" />
+    <meta property="og:title" content="Thank You for Your Application" />
+    <meta
+      property="og:description"
+      content="Your membership application to the Caracas Chamber of Commerce has been submitted."
+    />
+    <meta
+      property="og:image"
+      content="https://www.Alebproject32.github.io/wdd231/chamber/images/chamber_commerce_1.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.Alebproject32.github.io/wdd231/thankyou.html"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/chamber-commercer_2.jpeg"
+          alt="Caracas Chamber of Commerce Logo"
+        />
+        <h1>Caracas Chamber</h1>
+      </div>
+      <nav class="main-nav">
+        <button id="menuBtn">☰</button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="thankyou-main">
+      <h2>Thank You for Your Membership Application!</h2>
+      <p>
+        We appreciate your interest in joining the Caracas Chamber of Commerce.
+        Your application has been successfully submitted. We will review your
+        information and get back to you shortly.
+      </p>
+      <p>
+        Below is a summary of the information you provided in your application:
+      </p>
+
+      <div class="submitted-info">
+        <h3>Submitted Details:</h3>
+        <p>
+          <strong>Applicant Name:</strong>
+          <span id="displayFirstName"></span> <span id="displayLastName"></span>
+        </p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Mobile Phone:</strong> <span id="displayPhone"></span></p>
+        <p>
+          <strong>Company/Organization:</strong>
+          <span id="displayOrgName"></span>
+        </p>
+        <p>
+          <strong>Submission Date & Time:</strong>
+          <span id="displayTimestamp"></span>
+        </p>
+      </div>
+
+      <a href="index.html" class="back-home-button">Back to Home Page</a>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>Caracas Chamber of Commerce</p>
+        <p>10 Rue De La Paix</p>
+        <p>Capital District, main avenue 1090</p>
+        <p>
+          <a href="mailto:caracaschamber360@commerce.org">Correo electrónico</a>
+        </p>
+        <p>(+58) 0212-678-592300</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/" target="_blank"
+          ><img src="images/youtube_botton.webp" alt="YouTube"
+        /></a>
+        <a href="https://www.twitter.com/" target="_blank"
+          ><img src="images/twitter_botton.avif" alt="Twitter"
+        /></a>
+        <a href="https://www.linkedIn.com/" target="_blank"
+          ><img src="images/linkedin_botton.avif" alt="LinkedIn"
+        /></a>
+      </div>
+      <div class="footer-meta">
+        <p>WDD231 Class Project</p>
+        <p>Alejandro I. Pérez B.</p>
+        <p>© <span id="year"></span> Caracas Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </footer>
+
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@media (min-width: 768px) {
+  
+  .join-main {
+    flex-direction: row; 
+    align-items: flex-start; 
+    justify-content: space-between; 
+    padding: 30px;
+  }
+
+  .membership-form-section {
+    flex: 2; 
+    max-width: 65%;
+    margin-right: 30px;
+  }
+
+  .membership-levels-cards {
+    flex: 1; 
+    max-width: 30%;
+    margin-top: 50px;
+  }
+
+  .membership-levels-cards h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr; 
+    justify-items: start;
+    gap: 20px;
+  }
+
+  .membership-card {
+    width: 100%;
+    max-width: none;
+    padding: 15px 20px; 
+  }
+
+  
+  .join-form label {
+    margin-bottom: 10px;
+  }
+
+  .join-form input[type="text"],
+  .join-form input[type="email"],
+  .join-form input[type="tel"],
+  .join-form textarea {
+    padding: 12px;
+  }
+}
