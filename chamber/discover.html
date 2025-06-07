@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Venezuela - Caracas Chamber of Commerce</title>
+    <meta
+      name="description"
+      content="Explore Venezuela's top tourist and commercial attractions with the Caracas Chamber of Commerce."
+    />
+    <meta name="author" content="Alejandro I. Pérez B." />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Base stylesheets -->
+    <link rel="stylesheet" href="styles/small_home.css" />
+    <link rel="stylesheet" href="styles/larger_home.css" />
+    <!-- Discover-specific responsive styles -->
+    <link rel="stylesheet" href="styles/small_discover.css" />
+    <link
+      rel="stylesheet"
+      href="styles/medium_discover.css"
+      media="(min-width: 641px) and (max-width: 1024px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/larger_discover.css"
+      media="(min-width: 1025px)"
+    />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Discover Venezuela - Caracas Chamber" />
+    <meta
+      property="og:description"
+      content="Discover tourist and business hotspots across Venezuela."
+    />
+    <meta
+      property="og:image"
+      content="https://www.Alebproject32.github.io/wdd231/chamber/images/chamber_commerce_1.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.Alebproject32.github.io/wdd231/discover.html"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="images/chamber-commercer_2.jpeg"
+          alt="Chamber of Commerce Logo"
+        />
+        <h1>Caracas Chamber of Commerce</h1>
+      </div>
+      <nav class="main-nav">
+        <button id="menuBtn">☰</button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="discover-main">
+      <!-- Sidebar to show visit status -->
+      <aside class="sidebar-message">
+        <section class="visit-message-card">
+          <h2>Your Visit Status</h2>
+          <p id="visitMessage"></p>
+        </section>
+      </aside>
+
+      <!-- Section to display tourist/commercial cards -->
+      <section class="places-of-interest">
+        <h2>Places of Interest in Venezuela</h2>
+        <div id="cards-container" class="cards-grid">
+          <!-- Cards will be dynamically generated using JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <p>Caracas Chamber of Commerce</p>
+        <p>10 Rue De La Paix</p>
+        <p>Capital District, Main Avenue 1090</p>
+        <p>
+          <a href="mailto:caracaschamber360@commerce.org">Email Us</a>
+        </p>
+        <p>(+58) 0212-678-592300</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="images/youtube_botton.webp" alt="YouTube" />
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+          <img src="images/twitter_botton.avif" alt="Twitter" />
+        </a>
+        <a href="https://www.linkedIn.com/" target="_blank">
+          <img src="images/linkedin_botton.avif" alt="LinkedIn" />
+        </a>
+      </div>
+      <div class="footer-meta">
+        <p>WDD231 Class Project</p>
+        <p>Alejandro I. Pérez B.</p>
+        <p>© <span id="year"></span> Caracas Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </footer>
+
+    <!-- JavaScript to handle visit tracking and card population -->
+    <script src="scripts/discover.js" defer></script>
+    <script>
+      // Footer year and last modified date
+      document.getElementById("lastModified").textContent =
+        document.lastModified;
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Responsive menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        navigation.classList.toggle("open");
+        menuBtn.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

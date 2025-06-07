@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Angel Falls",
+    "address": "Canaima National Park, Bolívar State",
+    "description": "The highest waterfall in the world, located in the heart of Venezuela's rainforest.",
+    "image": "images/angel_falls.webp"
+  },
+  {
+    "name": "Mochima National Park",
+    "address": "Sucre and Anzoátegui States",
+    "description": "A marine and coastal paradise known for turquoise waters and coral reefs.",
+    "image": "images/mochima.webp"
+  },
+  {
+    "name": "Colonia Tovar",
+    "address": "Aragua State",
+    "description": "A picturesque German-style town with rich culture, crafts, and cool weather.",
+    "image": "images/colonia_tovar.webp"
+  },
+  {
+    "name": "Morrocoy National Park",
+    "address": "Falcón State",
+    "description": "Famous for its white sand beaches, cays, and mangroves.",
+    "image": "images/morrocoy.webp"
+  },
+  {
+    "name": "Pico Bolívar",
+    "address": "Mérida State",
+    "description": "Venezuela's highest mountain, accessible via the Mérida cable car.",
+    "image": "images/pico_bolivar.webp"
+  },
+  {
+    "name": "Puerto La Cruz Commercial Port",
+    "address": "Anzoátegui State",
+    "description": "A major commercial hub and beach resort on the Caribbean coast.",
+    "image": "images/puerto_la_cruz.webp"
+  },
+  {
+    "name": "La Casona Cultural Center",
+    "address": "Caracas, Capital District",
+    "description": "A historic presidential residence now turned into a cultural exhibition space.",
+    "image": "images/la_casona.webp"
+  },
+  {
+    "name": "Parque del Este (Sucre Park)",
+    "address": "Caracas, Capital District",
+    "description": "A lush urban park perfect for families, jogging, and relaxing.",
+    "image": "images/parque_este.webp"
+  }
+]

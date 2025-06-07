@@ -1,0 +1,83 @@
+/* styles/medium_discover.css */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .card {
+    display: grid;
+    grid-template-areas:
+      "name name"
+      "image image"
+      "address address"
+      "description description"
+      "button button";
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    grid-area: name;
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    color: #003366;
+  }
+
+  .card figure {
+    grid-area: image;
+    margin: 0;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card address {
+    grid-area: address;
+    margin: 0.5rem 1rem;
+    font-style: normal;
+    color: #555;
+  }
+
+  .card p {
+    grid-area: description;
+    margin: 0.5rem 1rem;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .card button {
+    grid-area: button;
+    margin: 0.5rem 1rem 1rem;
+    background-color: #00008b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .card:hover img {
+    transform: scale(1.05);
+  }
+  .sidebar-message {
+  padding: 1rem;
+  background-color: #eaf6ff;
+  border-left: 5px solid #007acc;
+  margin: 1rem 0;
+}
+
+.visit-message-card h2 {
+  margin-bottom: 0.5rem;
+}
+}
