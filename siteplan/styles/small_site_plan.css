@@ -1,0 +1,143 @@
+/* style.css */
+
+/* General body styling */
+body {
+    font-family: 'Open Sans', Verdana, sans-serif; /* Applied body font from typography section */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Darker background to make colors pop and white text readable */
+    color: #FFFFFF; /* White font color for general text, as per plan */
+}
+
+/* Header styling */
+header {
+    background-color: #00008B; /* Dark Blue for header, as per color scheme */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ADD8E6; /* Light Blue accent line */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Applied heading font */
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* Main content container */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #2e2e4e; /* Slightly lighter background for content sections */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid #ADD8E6; /* Light Blue border for sections */
+    border-radius: 8px;
+    background-color: #1f1f3f; /* Slightly darker background for content sections */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Applied heading font */
+    color: #ADD8E6; /* Light Blue for section titles, providing good contrast */
+    border-bottom: 2px solid #00008B; /* Dark Blue underline for section titles */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+section h3 {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Applied heading font */
+    color: #ADD8E6; /* Light Blue for subheadings */
+    margin-top: 20px;
+}
+
+section p, section ul li {
+    color: #FFFFFF; /* Ensure all text within sections is white */
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+section ul li strong {
+    color: #ADD8E6; /* Light Blue for strong emphasis in lists */
+}
+
+/* Color example blocks */
+.color-example {
+    width: 120px;
+    height: 60px;
+    display: inline-flex; /* Use flexbox for vertical centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 10px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-blue {
+    background-color: #00008B;
+    color: #FFFFFF;
+}
+
+.light-blue {
+    background-color: #ADD8E6;
+    color: #000000; /* Ensure text is visible on light blue */
+}
+
+.white-text {
+    background-color: #00008B; /* Use dark blue as background to clearly show white text */
+    color: #FFFFFF;
+}
+
+/* Typography examples */
+section #typography p[style] {
+    padding: 10px;
+    border: 1px dashed #ADD8E6;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Wireframe diagram styling */
+pre.wireframe {
+    background-color: #f0f0f0; /* Lighter background for the wireframes */
+    color: #333;
+    padding: 20px;
+    border: 1px dashed #999;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for ASCII art */
+    white-space: pre-wrap; /* Ensures the wireframe wraps within the box */
+    word-wrap: break-word;
+    font-size: 0.9em;
+    border-radius: 8px;
+    line-height: 1.2;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    background-color: #00008B; /* Dark Blue for footer */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 5px solid #ADD8E6; /* Light Blue accent line */
+}
