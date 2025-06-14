@@ -11,6 +11,7 @@
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
   </head>
   <body>
     <header>
@@ -41,15 +42,59 @@
     </nav>
 
     <main>
-      <section>
-        <h2>Welcome to Telecommunication Engineering</h2>
-        <p>
-          This site is a brief exploration of the field of Telecommunication
-          Engineering, its foundations, history, and what you need to become a
-          professional in this career path.
-        </p>
+      <section class="hero-section">
+        <img
+          src="https://images.unsplash.com/photo-1600880292105-5282d2f6ec57?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+          alt="Satellite in Orbit"
+          class="hero-image"
+        />
+        <button id="subscribeBtn" class="subscribe-button">Subscribe</button>
+
+        <div id="formModal" class="modal hidden">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <form id="subscribeForm">
+              <h3>
+                Engineering and future Professionals in this area, fill out the
+                form for a personalized experience.
+              </h3>
+              <label
+                >First Name:<input type="text" id="firstName" required
+              /></label>
+              <label
+                >Last Name:<input type="text" id="lastName" required
+              /></label>
+              <label
+                >Role:
+                <select id="role">
+                  <option value="Telecommunication Student.">
+                    Telecommunication Student.
+                  </option>
+                  <option value="Telecommunication Engineering.">
+                    Telecommunication Engineering.
+                  </option>
+                  <option value="Telecommunication Technical.">
+                    Telecommunication Technical.
+                  </option>
+                  <option value="Student or Professional in another area.">
+                    Student or Professional in another area.
+                  </option>
+                </select>
+              </label>
+              <label>Email Address:<input type="email" required /></label>
+              <label>Phone Number:<input type="tel" required /></label>
+              <label
+                >Please type your name of Study University or Job Organization:
+                <input type="text" required />
+              </label>
+              <button type="submit">Join</button>
+            </form>
+          </div>
+        </div>
+        <div id="welcomeMessage" class="hidden"></div>
       </section>
     </main>
+
     <footer>
       <p>
         &copy; <span id="currentyear"></span> Alejandro I. Perez B. - Caracas,
@@ -57,5 +102,27 @@
       </p>
       <p id="lastModified"></p>
     </footer>
+
+    <script src="scripts/hero.js"></script>
+    <script>
+      const name = localStorage.getItem("subscriberFirstName");
+      const lastname = localStorage.getItem("subscriberLastName");
+
+      if (name && lastname) {
+        const header = document.querySelector("header");
+        const userTag = document.createElement("div");
+        userTag.textContent = `👋 Welcome, ${name} ${lastname}`;
+        userTag.style.position = "absolute";
+        userTag.style.top = "20px";
+        userTag.style.right = "20px";
+        userTag.style.background = "#c9a017";
+        userTag.style.padding = "8px 14px";
+        userTag.style.borderRadius = "8px";
+        userTag.style.color = "#fff";
+        userTag.style.fontWeight = "bold";
+        header.style.position = "relative";
+        header.appendChild(userTag);
+      }
+    </script>
   </body>
 </html>
