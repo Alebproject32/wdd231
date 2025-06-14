@@ -21,21 +21,21 @@ window.addEventListener("click", (e) => {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  // Tomar datos del formulario
   const firstName = document.getElementById("firstName").value.trim();
   const lastName = document.getElementById("lastName").value.trim();
   const role = document.getElementById("role").value;
 
-  
+  // Guardar en localStorage para uso en otras páginas
   localStorage.setItem("subscriberFirstName", firstName);
   localStorage.setItem("subscriberLastName", lastName);
   localStorage.setItem("subscriberRole", role);
 
-  
+  // Cerrar el formulario (ocultar modal)
   modal.classList.add("hidden");
 
-  
-  const message = `Bienvenido ${firstName} ${lastName}, ${role}`;
+  // Mostrar mensaje de bienvenida personalizado
+  const message = `Welcome ${firstName} ${lastName}, ${role}`;
   welcomeDiv.textContent = message;
   welcomeDiv.classList.remove("hidden");
-
 });

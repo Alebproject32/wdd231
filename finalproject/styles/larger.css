@@ -68,5 +68,19 @@ img {
     width: 300px;
     height: 350px;
 }
+footer {
+        background-color:silver; /* Dark brown footer background */
+        color: var(--beige-light); /* Light beige footer text */
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.8em;
+        margin-top: 20px; /* Add some space above the footer */
+    }
 
+
+    footer p a {
+        color: var(--beige-light);
+        text-decoration: none;
 

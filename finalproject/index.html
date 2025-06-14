@@ -44,7 +44,7 @@
     <main>
       <section class="hero-section">
         <img
-          src="https://images.unsplash.com/photo-1600880292105-5282d2f6ec57?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80"
+          src="images/satellite.jpg"
           alt="Satellite in Orbit"
           class="hero-image"
         />
@@ -103,26 +103,8 @@
       <p id="lastModified"></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="scripts/hero.js"></script>
-    <script>
-      const name = localStorage.getItem("subscriberFirstName");
-      const lastname = localStorage.getItem("subscriberLastName");
-
-      if (name && lastname) {
-        const header = document.querySelector("header");
-        const userTag = document.createElement("div");
-        userTag.textContent = `👋 Welcome, ${name} ${lastname}`;
-        userTag.style.position = "absolute";
-        userTag.style.top = "20px";
-        userTag.style.right = "20px";
-        userTag.style.background = "#c9a017";
-        userTag.style.padding = "8px 14px";
-        userTag.style.borderRadius = "8px";
-        userTag.style.color = "#fff";
-        userTag.style.fontWeight = "bold";
-        header.style.position = "relative";
-        header.appendChild(userTag);
-      }
-    </script>
+    <script src="scripts/user.js"></script>
   </body>
 </html>
