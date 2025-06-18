@@ -10,11 +10,25 @@
     />
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link
+      rel="stylesheet"
+      href="styles/small.css"
+      media="only screen and (max-width: 480px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/medium.css"
+      media="only screen and (min-width: 481px) and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="only screen and (min-width: 769px)"
+    />
   </head>
   <body>
     <header>
-      <img src="images/logo.png" alt="Site Logo" class="logo" />
+      <img src="images/logo.png" alt="Site Logo" loading="lazy" class="logo" />
       <h1>
         Telecommunication Engineering by Alejandro Pérez, a trainee engineer.
       </h1>
@@ -61,8 +75,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/user.js"></script>
-    <script src="scripts/courses.js"></script>
+    <script src="scripts/hero.js" defer></script>
+    <script src="scripts/user.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
   </body>
 </html>

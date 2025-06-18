@@ -10,12 +10,26 @@
     />
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link
+      rel="stylesheet"
+      href="styles/small.css"
+      media="only screen and (max-width: 480px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/medium.css"
+      media="only screen and (min-width: 481px) and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="only screen and (min-width: 769px)"
+    />
     <link rel="stylesheet" href="styles/hero.css" />
   </head>
   <body>
     <header>
-      <img src="images/logo.png" alt="Site Logo" class="logo" />
+      <img src="images/logo.png" alt="Site Logo" loading="lazy" class="logo" />
       <h1>
         Telecommunication Engineering by Alejandro Pérez, a trainee engineer.
       </h1>
@@ -46,6 +60,7 @@
         <img
           src="images/satellite.webp"
           alt="Satellite in Orbit"
+          loading="lazy"
           class="hero-image"
         />
         <button id="subscribeBtn" class="subscribe-button">Subscribe</button>
@@ -108,19 +123,19 @@
       </p>
       <p id="lastModified"></p>
     </footer>
-      <div class="footer-social">
-          <a href="https://www.youtube.com/" target="_blank"
-            ><img src="images/youtube_botton.webp" alt="YouTube"
-          /></a>
-          <a href="https://www.twitter.com/" target="_blank"
-            ><img src="images/twitter_botton.avif" alt="Twitter"
-          /></a>
-          <a href="https://www.linkedIn.com/" target="_blank"
-            ><img src="images/linkedin_botton.avif" alt="LinkedIn"
-          /></a>
-        </div>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/" target="_blank"
+        ><img src="images/youtube_botton.webp" alt="YouTube" loading="lazy"
+      /></a>
+      <a href="https://www.twitter.com/" target="_blank"
+        ><img src="images/twitter_botton.avif" alt="Twitter" loading="lazy"
+      /></a>
+      <a href="https://www.linkedIn.com/" target="_blank"
+        ><img src="images/linkedin_botton.avif" alt="LinkedIn" loading="lazy"
+      /></a>
+    </div>
     <!-- Scripts -->
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/user.js"></script>
+    <script src="scripts/hero.js" defer></script>
+    <script src="scripts/user.js" defer></script>
   </body>
 </html>

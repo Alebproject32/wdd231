@@ -10,11 +10,25 @@
     />
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link
+      rel="stylesheet"
+      href="styles/small.css"
+      media="only screen and (max-width: 480px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/medium.css"
+      media="only screen and (min-width: 481px) and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="only screen and (min-width: 769px)"
+    />
   </head>
   <body>
     <header>
-      <img src="images/logo.png" alt="Site Logo" class="logo" />
+      <img src="images/logo.png" alt="Site Logo" loading="lazy" class="logo" />
       <h1>
         Telecommunication Engineering by Alejandro Pérez, a trainee engineer.
       </h1>
@@ -63,10 +77,18 @@
         <h2>Base Stations and Satellite Communication</h2>
         <div class="image-gallery">
           <div class="image-card">
-            <img src="images/radiobase.webp" alt="Collage of Telecom Systems" />
+            <img
+              src="images/radiobase.webp"
+              alt="Collage of Telecom Systems"
+              loading="lazy"
+            />
           </div>
           <div class="image-card">
-            <img src="images/satellite.webp" alt="Collage of Telecom Systems" />
+            <img
+              src="images/satellite.webp"
+              alt="Collage of Telecom Systems"
+              loading="lazy"
+            />
           </div>
           <p>
             Modern telecommunication relies on infrastructure like radio base
@@ -84,7 +106,7 @@
       </p>
       <p id="lastModified"></p>
     </footer>
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/user.js"></script>
+    <script src="scripts/hero.js" defer></script>
+    <script src="scripts/user.js" defer></script>
   </body>
 </html>

@@ -10,11 +10,25 @@
     />
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link
+      rel="stylesheet"
+      href="styles/small.css"
+      media="only screen and (max-width: 480px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/medium.css"
+      media="only screen and (min-width: 481px) and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="only screen and (min-width: 769px)"
+    />
   </head>
   <body>
     <header>
-      <img src="images/logo.png" alt="Site Logo" class="logo" />
+      <img src="images/logo.png" alt="Site Logo" loading="lazy" class="logo" />
       <h1>
         Telecommunication Engineering by Alejandro Pérez, a trainee engineer.
       </h1>
@@ -50,11 +64,20 @@
             telephone, radio, and now modern digital systems.
           </p>
           <div class="image-card">
-            <img class="pioneer" src="images/telegraph_pioneer.webp" alt="Telegraph Pioneer" />
+            <img
+              class="pioneer"
+              src="images/telegraph_pioneer.webp"
+              alt="Telegraph Pioneer"
+              loading="lazy"
+            />
             <h4>Telegraph Pioneer</h4>
           </div>
           <div class="image-card">
-            <img src="images/smoke_signal.webp" alt="Smoke Signal" />
+            <img
+              src="images/smoke_signal.webp"
+              alt="Smoke Signal"
+              loading="lazy"
+            />
             <h4>Smoke Signal</h4>
           </div>
         </div>
@@ -72,13 +95,16 @@
             <img
               src="images/telecommunication_tower.webp"
               alt="Telecom Tower"
+              loading="lazy"
             />
             <h4>Telecommunication Tower</h4>
           </div>
           <div class="image-card">
-            <img class="electronics"
+            <img
+              class="electronics"
               src="images/electronics_communication_engineering.webp"
               alt="Electronics Communication"
+              loading="lazy"
             />
             <h4>Electronics Communication</h4>
           </div>
@@ -97,11 +123,17 @@
             <img
               src="images/alexander_graham_bell.webp"
               alt="Alexander Graham Bell"
+              loading="lazy"
             />
             <h4>Alexander Graham Bell</h4>
           </div>
           <div class="image-card">
-            <img class="claude" src="images/claude_shannon.webp" alt="Claude Shannon" />
+            <img
+              class="claude"
+              src="images/claude_shannon.webp"
+              alt="Claude Shannon"
+              loading="lazy"
+            />
             <h4>Claude Shannon</h4>
           </div>
         </div>
@@ -116,7 +148,7 @@
       <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/hero.js"></script>
-    <script src="scripts/user.js"></script>
+    <script src="scripts/hero.js" defer></script>
+    <script src="scripts/user.js" defer></script>
   </body>
 </html>
