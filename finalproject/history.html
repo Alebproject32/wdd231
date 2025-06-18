@@ -11,7 +11,6 @@
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/larger.css" />
-    
   </head>
   <body>
     <header>
@@ -44,46 +43,71 @@
     <main>
       <section>
         <h2>Origin of Telecommunications</h2>
-        <img
-          src="images/telegraph_pioneer.png"
-          alt="Origin of Telecommunications"
-        />
-        <img src="images/smoke_signal.jpg" alt="Origin of Telecommunications" />
-        <p>
-          The history of telecommunications begins with visual signals such as
-          smoke signals and optical beacons, evolving to the telegraph,
-          telephone, radio, and now modern digital systems.
-        </p>
+        <div class="image-gallery">
+          <p>
+            The history of telecommunications begins with visual signals such as
+            smoke signals and optical beacons, evolving to the telegraph,
+            telephone, radio, and now modern digital systems.
+          </p>
+          <div class="image-card">
+            <img class="pioneer" src="images/telegraph_pioneer.webp" alt="Telegraph Pioneer" />
+            <h4>Telegraph Pioneer</h4>
+          </div>
+          <div class="image-card">
+            <img src="images/smoke_signal.webp" alt="Smoke Signal" />
+            <h4>Smoke Signal</h4>
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>Applied Science in Telecommunications</h2>
-        <img
-          src="images/telecommunication_tower.jpg"
-          alt="Telecom as Applied Science"
-        />
-        <img
-          src="images/electronics_communication_engineering.webp"
-          alt="Telecom as Applied Science"
-        />
-        <p>
-          Telecommunications is an applied science because it combines physics,
-          mathematics, and engineering principles to build communication systems
-          that shape modern society.
-        </p>
+        <div class="image-gallery">
+          <p>
+            Telecommunications is an applied science because it combines
+            physics, mathematics, and engineering principles to build
+            communication systems that shape modern society.
+          </p>
+          <div class="image-card">
+            <img
+              src="images/telecommunication_tower.webp"
+              alt="Telecom Tower"
+            />
+            <h4>Telecommunication Tower</h4>
+          </div>
+          <div class="image-card">
+            <img class="electronics"
+              src="images/electronics_communication_engineering.webp"
+              alt="Electronics Communication"
+            />
+            <h4>Electronics Communication</h4>
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>Founding Figures</h2>
-        <img src="images/alexander_graham_bell.jpg" alt="Founding Figures" />
-        <img src="images/claude_shannon.jpg" alt="Founding Figures" />
-        <p>
-          Great minds like Alexander Graham Bell, Guglielmo Marconi, and Claude
-          Shannon laid the foundation for the systems we use today. Their
-          contributions revolutionized how we connect with each other.
-        </p>
+        <div class="image-gallery">
+          <p>
+            Great minds like Alexander Graham Bell, Guglielmo Marconi, and
+            Claude Shannon laid the foundation for the systems we use today.
+            Their contributions revolutionized how we connect with each other.
+          </p>
+          <div class="image-card">
+            <img
+              src="images/alexander_graham_bell.webp"
+              alt="Alexander Graham Bell"
+            />
+            <h4>Alexander Graham Bell</h4>
+          </div>
+          <div class="image-card">
+            <img class="claude" src="images/claude_shannon.webp" alt="Claude Shannon" />
+            <h4>Claude Shannon</h4>
+          </div>
+        </div>
       </section>
     </main>
+
     <footer>
       <p>
         &copy; <span id="currentyear"></span> Alejandro I. Perez B. - Caracas,
@@ -91,5 +115,8 @@
       </p>
       <p id="lastModified"></p>
     </footer>
+
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/user.js"></script>
   </body>
 </html>

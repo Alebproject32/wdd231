@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Signals and Systems",
+    "title": "Understanding Signal Processing",
+    "date": "2025-01-15",
+    "image": "images/5g-mobile-internet-communication-tower-600nw-2350173581.webp"
+  },
+  {
+    "name": "Digital Communications",
+    "title": "Core Digital Communication Techniques",
+    "date": "2025-01-20",
+    "image": "images/digital_communication.webp"
+  },
+  {
+    "name": "Wireless Networks",
+    "title": "Fundamentals of Wireless Communication",
+    "date": "2025-02-01",
+    "image": "images/wireless_technology.webp"
+  },
+  {
+    "name": "Optical Fiber Communication",
+    "title": "Light-Based Data Transmission",
+    "date": "2025-02-10",
+    "image": "images/optical_fiber.webp"
+  },
+  {
+    "name": "Telecommunication Systems",
+    "title": "Overview of Modern Telecom Systems",
+    "date": "2025-02-18",
+    "image": "images/telecom.webp"
+  },
+  {
+    "name": "Network Security",
+    "title": "Security in Communication Networks",
+    "date": "2025-02-28",
+    "image": "images/networking_security.webp"
+  },
+  {
+    "name": "Mobile Communications",
+    "title": "Basics of Mobile Networks (3G/4G/5G)",
+    "date": "2025-03-05",
+    "image": "images/mobile.webp"
+  },
+  {
+    "name": "Antenna Theory",
+    "title": "Design and Analysis of Antennas",
+    "date": "2025-03-12",
+    "image": "images/antenna.webp"
+  },
+  {
+    "name": "Microwave Engineering",
+    "title": "Microwave Devices and Circuits",
+    "date": "2025-03-20",
+    "image": "images/spectrum-analyzer-microwave.webp"
+  },
+  {
+    "name": "Internet of Things (IoT)",
+    "title": "Telecom Applications in IoT",
+    "date": "2025-03-28",
+    "image": "images/iot.webp"
+  },
+  {
+    "name": "Satellite Communication",
+    "title": "Fundamentals of Satellite Systems",
+    "date": "2025-04-01",
+    "image": "images/satellite.jpg"
+  },
+  {
+    "name": "RF Engineering",
+    "title": "High Frequency Electronics",
+    "date": "2025-04-10",
+    "image": "images/rf_engineering.webp"
+  },
+  {
+    "name": "Switching Systems",
+    "title": "Techniques of Network Switching",
+    "date": "2025-04-15",
+    "image": "images/Switch.webp"
+  },
+  {
+    "name": "Digital Signal Processing",
+    "title": "DSP for Communication Engineers",
+    "date": "2025-04-20",
+    "image": "images/digital_signal_processing.webp"
+  },
+  {
+    "name": "Teletraffic Engineering",
+    "title": "Performance Analysis in Networks",
+    "date": "2025-04-28",
+    "image": "images/teletraffic.webp"
+  }
+]

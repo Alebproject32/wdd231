@@ -11,7 +11,6 @@
     <meta name="author" content="Alejandro I. Pérez B." />
     <link rel="icon" href="images/favicon_telecom.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/larger.css" />
-    
   </head>
   <body>
     <header>
@@ -44,21 +43,15 @@
     <main>
       <section>
         <h2>Essential Courses for Telecommunication Engineering</h2>
-        <ul>
-          <li>Signals and Systems</li>
-          <li>Electromagnetic Fields</li>
-          <li>Digital Communications</li>
-          <li>Microwave Engineering</li>
-          <li>Satellite Communication</li>
-          <li>Telecommunication Networks</li>
-          <li>Data Transmission & Fiber Optics</li>
-        </ul>
         <p>
           These subjects are vital for understanding the hardware and software
           behind global communication systems.
         </p>
+        <div id="courses-container" class="courses-grid"></div>
+        <form id="subscription-form" onsubmit="handleSubmit(event)"></form>
       </section>
     </main>
+
     <footer>
       <p>
         &copy; <span id="currentyear"></span> Alejandro I. Perez B. - Caracas,
@@ -66,5 +59,10 @@
       </p>
       <p id="lastModified"></p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/user.js"></script>
+    <script src="scripts/courses.js"></script>
   </body>
 </html>
