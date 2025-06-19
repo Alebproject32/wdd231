@@ -1,0 +1,105 @@
+@media (min-width: 481px) and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .logo {
+    width: 55px;
+    position: static;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  header {
+    background: linear-gradient(to right, #001f3f, #003366);
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  header .intro {
+    font-size: 14px;
+    margin-top: 10px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  h2, p {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .courses-grid,
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 1rem;
+  }
+
+  .course-card,
+  .image-card {
+    width: 100%;
+    margin: auto;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .footer-social {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-social a img {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.75em;
+    padding: 10px;
+    background-color: silver;
+  }
+}
